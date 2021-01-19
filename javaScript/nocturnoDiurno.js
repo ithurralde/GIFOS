@@ -22,6 +22,9 @@ changeTheme.addEventListener("click", () => {
         changeTheme.textContent = "Modo Diurno";
         logo.setAttribute('src', "images/Logo-modo-noc.svg");
         btnAgregar.setAttribute('src', "images/CTA-crar-gifo-modo-noc.svg");
+        btnAgregar.addEventListener("click", () => {
+            btnAgregar.setAttribute('src', "images/CTA-crear-gifo-active-modo-noc.svg");
+        });
         lupa.setAttribute('src', "images/icon-search-modo-noct.svg");
         imgLupaSuggestion.forEach(element => {
             element.setAttribute('src', "images/icon-search-modo-noct.svg");
@@ -35,6 +38,9 @@ changeTheme.addEventListener("click", () => {
         changeTheme.textContent = "Modo Nocturno";
         logo.setAttribute('src', "images/logo-desktop.svg");
         btnAgregar.setAttribute('src', "images/button-crear-gifo.svg");
+        btnAgregar.addEventListener("click", () => {
+            btnAgregar.setAttribute('src', "images/CTA-crear-gifo-hover.svg");
+        });
         lupa.setAttribute('src', "images/icon-search.svg");
         imgLupaSuggestion.forEach(element => {
             element.setAttribute('src', "images/icon-search.svg");

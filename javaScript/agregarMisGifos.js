@@ -77,6 +77,10 @@ const getVideo = (h1Up, h1Down, pUp, pDown) => {
 }
 
 btnAgregar.addEventListener("click", ()  => {
+    if (content.className === "content dark-theme")
+        btnAgregar.setAttribute('src', "images/CTA-crar-gifo-modo-noc.svg");
+    else
+        btnAgregar.setAttribute('src', "images/CTA-crear-gifo-hover.svg");
     overlayVideo.style.display = "none";
     loadHome.style.display = "none";
     loadFav.style.display = "none";

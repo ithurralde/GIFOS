@@ -3,51 +3,55 @@ const gifsMisGifos = document.querySelector(".sectionGifsMisGifos");
 
 
 misGifos.addEventListener("click", async () =>{
-    loadHome.style.display = "none";
-    loadFav.style.display = "none";
-    loadAgregarGifos.style.display = "none";
-    loadTrendings.style.display = "block";
-    loadMisGifos.style.display = "block";
-    gifsMisGifos.innerHTML = '';
+  if (content.className === "content dark-theme")
+    btnAgregar.setAttribute('src', "images/CTA-crar-gifo-modo-noc.svg");
+  else
+    btnAgregar.setAttribute('src', "images/button-crear-gifo.svg");
+  loadHome.style.display = "none";
+  loadFav.style.display = "none";
+  loadAgregarGifos.style.display = "none";
+  loadTrendings.style.display = "block";
+  loadMisGifos.style.display = "block";
+  gifsMisGifos.innerHTML = '';
 
-    jsonLocalstorage = JSON.parse(localStorage.getItem("misGifos"));
-    // jsonLocalstorage.list.push(parseMiGif);
-    console.log("el json pero con el get ULTRA JEJE: " + jsonLocalstorage);
+  jsonLocalstorage = JSON.parse(localStorage.getItem("misGifos"));
+  // jsonLocalstorage.list.push(parseMiGif);
+  console.log("el json pero con el get ULTRA JEJE: " + jsonLocalstorage);
 
-    
+  
 
-    if (jsonLocalstorage == null || jsonLocalstorage.list.length === 0){
-      // todo: el html para el caso que no hay gifs guardados en fav
-      const imgMisGifosSinContenido = document.createElement("img");
-      imgMisGifosSinContenido.setAttribute('src', "/images/icon-mis-gifos-sin-contenido.svg");
-      gifsMisGifos.appendChild(imgMisGifosSinContenido);
-      const titleSinContenido = document.createElement("h1");
-      titleSinContenido.textContent = "¡Anímate a crear tu primer GIFO!";
-      titleSinContenido.classList = "titleSinContenido";
-      gifsMisGifos.appendChild(titleSinContenido);
-    }
-    else{
-      // for (let i = 0; i < jsonLocalstorage.list.length; i++) {
-      //   const element = jsonLocalstorage.list[i];
-      //   // addGifs(element, gifsMisGifos);
-      // }
-      reccorer(jsonLocalstorage);
-    }
+  if (jsonLocalstorage == null || jsonLocalstorage.list.length === 0){
+    // todo: el html para el caso que no hay gifs guardados en fav
+    const imgMisGifosSinContenido = document.createElement("img");
+    imgMisGifosSinContenido.setAttribute('src', "/images/icon-mis-gifos-sin-contenido.svg");
+    gifsMisGifos.appendChild(imgMisGifosSinContenido);
+    const titleSinContenido = document.createElement("h1");
+    titleSinContenido.textContent = "¡Anímate a crear tu primer GIFO!";
+    titleSinContenido.classList = "titleSinContenido";
+    gifsMisGifos.appendChild(titleSinContenido);
+  }
+  else{
+    // for (let i = 0; i < jsonLocalstorage.list.length; i++) {
+    //   const element = jsonLocalstorage.list[i];
+    //   // addGifs(element, gifsMisGifos);
+    // }
+    reccorer(jsonLocalstorage);
+  }
 
 
-    
-    // esto lo hago porque no te deja hacer click en los gifs en el modo mobile (no se ve el overlay)
-    let gifContainer = document.querySelectorAll(".gifs .gifContainer");
-    gifContainer[0].style.position = "relative";
-    gifContainer[1].style.position = "relative";
-    gifContainer[2].style.position = "relative";
-    let overlay = document.querySelectorAll(".gifs .overlay");
-    overlay[0].style.display = "flex";
-    overlay[1].style.display = "flex";
-    overlay[2].style.display = "flex";
+  
+  // esto lo hago porque no te deja hacer click en los gifs en el modo mobile (no se ve el overlay)
+  let gifContainer = document.querySelectorAll(".gifs .gifContainer");
+  gifContainer[0].style.position = "relative";
+  gifContainer[1].style.position = "relative";
+  gifContainer[2].style.position = "relative";
+  let overlay = document.querySelectorAll(".gifs .overlay");
+  overlay[0].style.display = "flex";
+  overlay[1].style.display = "flex";
+  overlay[2].style.display = "flex";
 
-    const check = document.querySelector("#chkbox-menu");
-    check.checked = false;
+  const check = document.querySelector("#chkbox-menu");
+  check.checked = false;
 });
 
 
