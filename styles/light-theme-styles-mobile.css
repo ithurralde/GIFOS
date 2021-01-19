@@ -52,7 +52,7 @@ ul li {
 
 .menu ul {
     background: rgba(87,46,229,0.90);
-    width: 107%;
+    width: 109%;
     position: fixed;
     margin: 30px 0px 0 -30%;
     padding-bottom: 241%;
@@ -135,7 +135,6 @@ ul li {
     width: 65%;
     align-self: center;
     padding-left: 30px;
-    /* position: relative; */
     left: 5px;
     outline: none;
 
@@ -145,17 +144,12 @@ ul li {
     text-align: left;
 }
 
-.searchInput img {
-    /* padding-right: 5px; */
-}
 
 .sectionGifs {
     display: inline;
 }
 
 .sectionGifs .noSearch{
-    /* justify-self: center;
-    text-align: center; */
     align-self: center;
     position: relative;
     left: 44%;
@@ -177,7 +171,6 @@ ul li {
 
 
 .sectionGifs h1 {
-    /* width: 100%; */
     padding: 80px 0 40px;
     font-family: Montserrat-Bold;
     font-size: 35px;
@@ -301,7 +294,6 @@ ul li {
         color: #FFFFFF;
         text-align: center;
         line-height: 45px;
-        /* box-shadow: inset 0 -1px #FFFFFF; */
     }
 
     .li-btn-agregar {
@@ -313,43 +305,25 @@ ul li {
         height: 1px;
         margin-left: 45%;
         background:  rgba(255, 255, 255, 0.9);
-        /* box-shadow: inset 0 -1px #FFFFFF; */
         width: 11%;
     }
-   
-    /* .lineaMenu {
-        display: block;
-        border: 1px solid white;
-        width: 100px;
-    } */
 /* -------------------------- Fin Menu hamburguesa -------------------------- */
 /** ----------------------------------------------- Suggestion ----------------------------------------------- */
 .line {
-    /* opacity: 0.5; */
     width: 100%;
     display: none;
-    /* height: 0px; */
     border: 1px solid #9CAFC3;
 }
 .suggest {
     width: 100%;
-    /* position: absolute; */
     left: 45px;
-    bottom: 35px;
-    /* align-self: flex-start; */
-    
+    bottom: 35px;   
 }
 
 .suggest ul{
-    /* display: flex; */
     width: 100%;
     margin: 0;
     padding: 0;
-    /* flex-direction: column;
-    justify-content: flex-end; */
-    /* align-self: flex-end; */
-    /* align-self: flex-start; */
-    
 }
 
 .suggest ul li img {
@@ -384,9 +358,6 @@ ul li {
     text-align: left;
     position: relative;
     left: 30px;
-    /* align-self: flex-end; */
-    /* align-self: flex-end; */
-     /* align-self: flex-start;  */
 }
 
 /** ----------------------------------------------- Fin Suggestion ----------------------------------------------- */
@@ -401,13 +372,11 @@ ul li {
     display: none;
 }
 /** ----------------------------------------------- Seccion Favoritos ----------------------------------------------- */
-
     .favoritos {
         display: none;
         line-height: 25px;
         padding-bottom: 100px;
         padding-top: 15px;
-        /* padding-top: 100px; */
     }
 
     .favoritos .img-favs{
@@ -438,18 +407,6 @@ ul li {
         margin-left: 5%;
     }
 
-    /* .favoritos .gifContainer {
-        width: 377px;
-        height: 299px;
-        margin: 0px;
-        border: 0;
-    } */
-
-    /* .favoritos .btn-fav{
-        width: 32px;
-        height: 32px;
-    } */
-
 /** ----------------------------------------------- Fin Seccion Favoritos ----------------------------------------------- */
 
 
@@ -460,17 +417,10 @@ ul li {
     line-height: 25px;
     padding-bottom: 100px;
     padding-top: 15px;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
 }
 
 .misGifos div{
     text-align: center;
-    /* align-self: center; */
-    /* vertical-align: top; */
-    /* justify-self: center; */
-    /* align-content: center; */
 }
 
 .misGifos h1{
@@ -491,197 +441,156 @@ ul li {
     padding-bottom: 13.4%;
 }
 
-/* .sectionGifsMisGifos{
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    left: 6%;
-} */
-
-/* .misGifos .btn-fav{
-    width: 32px;
-    height: 32px;
-} */
-
-
 /** ----------------------------------------------- Fin Seccion MisGifos ----------------------------------------------- */
 /** ----------------------------------------------- Seccion agregarGifos ----------------------------------------------- */
-.agregarGifos {
-    display: none;
-}
+    .agregarGifos {
+        display: none;
+    }
 
-.img-camara {
-    display: none;
-}
-.pasos {
-    display: none;
-}
-.padrelineaAzul {
-    display: none;
-}
-.record-actions {
-    display: none;
-}
+    .img-camara {
+        display: none;
+    }
+    .pasos {
+        display: none;
+    }
+    .padrelineaAzul {
+        display: none;
+    }
+    .record-actions {
+        display: none;
+    }
 /** ----------------------------------------------- Fin Seccion agregarGifos ----------------------------------------------- */
 
 /** ----------------------------------------------- Fin Header ----------------------------------------------- */
 
 /** ----------------------------------------------- Trendings ----------------------------------------------- */
-.seccionTrendigs {
-    background: #F3F5F8;
-}
+    .seccionTrendigs {
+        background: #F3F5F8;
+    }
 
-.seccionTrendigs h2 {
-    font-family: Montserrat-Bold;
-    font-size: 25px;
-    color: #572EE5;
-    text-align: center;
-    line-height: 30px;
-}
+    .seccionTrendigs h2 {
+        font-family: Montserrat-Bold;
+        font-size: 25px;
+        color: #572EE5;
+        text-align: center;
+        line-height: 30px;
+    }
 
-.seccionTrendigs p {
-    font-family: Roboto-Regular;
-    font-size: 18px;
-    color: #000000;
-    text-align: center;
-}
-
-
-.gifContainer .gif {
-    width: 156px;
-    height: 120px;
-    padding: 10px;
-}
-
-.maxGif { 
-    /* align-self: center; */
-    /* width: 695px;
-    height: 385px; */
-    /* width: 340px;
-    height: 200px; */
-}
-
-.maxGifBackground {
-    position: fixed;
-    top: 0px;
-    display: flex;
-    /* top: 160px; */
-    /* left: 355px; */
-    padding-left: 2%;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-}
-
-/* .maxGifBackground .fav {
-    bottom: 2px;
-    left: 2px;
-} */
-
-.maxGifBackground .cruzMax{
-    position: absolute;
-    left: 85%;
-    bottom: 87.5%;
-}
-
-.maxGifUser {
-    font-family: Roboto-Regular;
-    font-size: 18px;
-    color: #000000;
-    height: 22px;
-    width: 75%;
-}
-
-.maxGifTitle {
-    font-family: Roboto-Bold;
-    font-size: 16px;
-    color: #000000;
-    width: 75%;
-    height: 19px;
-}
-
-.fav{
-    position: initial;  
-    width: 32px;
-    margin-top: -25px;
-    margin-left: 250px;
-    margin-left: 70%;
-    /* left: 75%;  
-    bottom: 32.5%;   */
-}
-
-.download{
-    position: initial;
-    width: 32px;
-    margin-top: -32px;
-    margin-left: 300px;
-    margin-left: 82%;
-    /* left: 85%;  
-    bottom: 32.5%;  */
-}
-
-.GIFOS{
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
-
-.btn-slider {
-    align-self: center;
-    outline: none;
-}
-
-.btn-slider img {
-    width: 15px;
-    height: 15px;
-}
-
-.gifs .gifContainer{
-    width: 243px;
-    height: 187px;
-}
-
-.gifs .gifContainer .gif{
-    width: 243px;
-    height: 187px;
-}
-
-.gifs .gifContainer .overlay{
-    width: 243px;
-    height: 187px;
-}
+    .seccionTrendigs p {
+        font-family: Roboto-Regular;
+        font-size: 18px;
+        color: #000000;
+        text-align: center;
+    }
 
 
+    .gifContainer .gif {
+        width: 156px;
+        height: 120px;
+        padding: 10px;
+    }
+
+    .maxGifBackground {
+        position: fixed;
+        top: 0px;
+        display: flex;
+        padding-left: 2%;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+    }
+
+    .maxGifBackground .cruzMax{
+        position: absolute;
+        left: 85%;
+        bottom: 87.5%;
+    }
+
+    .maxGifUser {
+        font-family: Roboto-Regular;
+        font-size: 18px;
+        color: #000000;
+        height: 22px;
+        width: 75%;
+    }
+
+    .maxGifTitle {
+        font-family: Roboto-Bold;
+        font-size: 16px;
+        color: #000000;
+        width: 75%;
+        height: 19px;
+    }
+
+    .fav{
+        position: initial;  
+        width: 32px;
+        margin-top: -25px;
+        margin-left: 250px;
+        margin-left: 70%;
+    }
+
+    .download{
+        position: initial;
+        width: 32px;
+        margin-top: -32px;
+        margin-left: 300px;
+        margin-left: 82%;
+    }
+
+    .GIFOS{
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .btn-slider {
+        align-self: center;
+        outline: none;
+    }
+
+    .btn-slider img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .gifs .gifContainer{
+        width: 243px;
+        height: 187px;
+    }
+
+    .gifs .gifContainer .gif{
+        width: 243px;
+        height: 187px;
+    }
+
+    .gifs .gifContainer .overlay{
+        width: 243px;
+        height: 187px;
+    }
 
 /** ----------------------------------------------- OVERLAY ----------------------------------------------- */
 
  .sectionGifs {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-around; */
     flex-direction: row;
   }
 
 .gifs {
     display: flex;
     flex-wrap: wrap;
-    /* width: 100%; */
     width: 265px;
-    /* justify-content: space-around; */
     flex-direction: row;
   } 
   
   .gifContainer {
-    /* width: 650px;
-    height: 400px; */
     position: relative;
     overflow: hidden;
     width: 156px;
     height: 120px;
-    /* margin: 1em; */
-    /* overflow: hidden; */
   }
   
   .overlay {
@@ -692,19 +601,8 @@ ul li {
     margin: 10px;
     opacity: 0.7;
     background: #572EE5;
-    /* left: 0; */
-    /* top: 100%; */
-    /*transform: translate(-50px, 0);
-      -webkit-transform: translate(0,-350px);
-      -o-transform: translate(0,-350px); 
-      -moz-transform: translate(0,-350px);*/
-  
-    /* transition: 1s; */
   }
   
-  /* .gifContainer .overlay {
-    top: 0%;
-  } */
   .gifContainer:hover .overlay {
     top: 0%;
   }
@@ -757,33 +655,32 @@ ul li {
 
 /** ----------------------------------------------- Footer ----------------------------------------------- */
 
-.footer ul{
-    display: flex;
-    justify-content: center;
-    height: 80px;
-    padding: 40px 0;
-    margin-left: 30%;
-}
+    .footer ul{
+        display: flex;
+        justify-content: center;
+        height: 80px;
+        padding: 40px 0;
+        margin-left: 30%;
+    }
 
-.footer li {
-    padding: 10px;
-}
+    .footer li {
+        padding: 10px;
+    }
 
-.redSocial{
-    align-self: flex-end;
-    position: relative;
-    right: 112px;
-    /* margin-left: -100px; */
-}
+    .redSocial{
+        align-self: flex-end;
+        position: relative;
+        right: 112px;
+    }
 
-.footer a{
-    color: #9CAFC3;
-}
+    .footer a{
+        color: #9CAFC3;
+    }
 
-.footer p {
-    text-align: center;
-    padding-bottom: 20px;
-}
+    .footer p {
+        text-align: center;
+        padding-bottom: 20px;
+    }
 
 
 /** ----------------------------------------------- Fin Footer ----------------------------------------------- */
