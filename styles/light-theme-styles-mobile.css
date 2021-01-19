@@ -1,0 +1,788 @@
+@import url('https://fonts.google.com/specimen/Montserrat?query=mont');
+*{
+    margin: 0;
+    border: 0;
+}
+
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url('Montserrat/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('Montserrat/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url('Montserrat/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url('Roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url('Roboto/Roboto-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url('Roboto/Roboto-Bold.ttf');
+}
+/** ----------------------------------------------- Header ----------------------------------------------- */
+.logoYlista {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 8%;
+}
+
+ul li {
+    list-style:none;
+}
+
+.bloqueAzul{
+    background: #572EE5;
+    height: 5px;
+    width: 100%;
+}
+
+.menu ul {
+    background: rgba(87,46,229,0.90);
+    width: 107%;
+    position: fixed;
+    margin: 30px 0px 0 -30%;
+    padding-bottom: 241%;
+}
+
+.btn-agregar {
+    display: none;
+}
+
+.menu li {
+    font-family: Montserrat;
+    font-size: 13px;
+    color: #ffffff;
+    letter-spacing: 0;
+    text-align: center;
+    position: relative;
+    right: 9%;
+    }
+
+.btn-menu{
+    /* font-family: Montserrat-Bold; */
+    font-size: 25px;
+    /* color: #572EE5; */
+    text-align: center;
+    line-height: 33px;
+}
+.btn-menu h1 {
+    font-size: 40px;
+    /* padding: 15px; */
+    font-family: Montserrat-Bold;
+    width: 70%;
+    font-size: 25px;
+    color: #572EE5;
+    text-align: center;
+    line-height: 33px;
+    /* position: relative;
+    left: 15%; */
+    margin-left: 15%;
+    /* align-self: center; */
+}
+
+.btn-menu span {
+    color: #50E3C2;
+}
+
+.btn-menu h3 {
+    padding-top: 100px;
+    color: #572EE5;
+}
+
+.btn-menu p{
+    font-family: Montserrat-Medium;
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.imgBienvenida {
+    width: 70%;
+    height: 100%; 
+}
+
+.searchInput {
+    display: flex;
+    margin: -8px 0 25px 8%;
+    padding: 0px 10px;
+    border: 1px solid #572EE5;
+    border-radius: 30px;
+    position: static;
+    width: 80%;
+    flex-wrap: wrap;
+    height: 100%;
+
+    border: 1px solid #572EE5;
+    border-radius: 27px;
+    border-radius: 27px;
+}
+
+.inputText {
+    height: 80%;
+    width: 65%;
+    align-self: center;
+    padding-left: 30px;
+    /* position: relative; */
+    left: 5px;
+    outline: none;
+
+    font-family: Roboto-Regular;
+    font-size: 16px;
+    color: #000000;
+    text-align: left;
+}
+
+.searchInput img {
+    /* padding-right: 5px; */
+}
+
+.sectionGifs {
+    display: inline;
+}
+
+.sectionGifs .noSearch{
+    /* justify-self: center;
+    text-align: center; */
+    align-self: center;
+    position: relative;
+    left: 44%;
+}
+
+.sectionGifs p{
+    width: 100%;
+    font-family: Montserrat-Bold;
+    font-size: 22px;
+    color: #50E3C2;
+    text-align: center;
+    line-height: 25px;
+}
+
+.sectionGifs .gif {
+    width: 357px;
+    height: 275px;
+}
+
+
+.sectionGifs h1 {
+    /* width: 100%; */
+    padding: 80px 0 40px;
+    font-family: Montserrat-Bold;
+    font-size: 35px;
+    color: #572EE5;
+    text-align: center;
+    line-height: 30px;
+}
+
+.buscar {
+    height: 35px;
+    width: 35px;
+    background: transparent;
+    align-self: center;
+    outline: none;
+}
+
+.verMas{
+    display: none;
+    width: 100%;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.verMas p{
+    border: 1px solid #572EE5;
+    border-radius: 25px;
+    font-family: Montserrat-Bold;
+    font-size: 13px;
+    color: #572EE5;
+    letter-spacing: 0;
+    text-align: center;
+    padding: 0;
+    width: 100px;
+}
+
+.verMasFavs {
+    display: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.verMasFavs p{
+    border: 1px solid #572EE5;
+    border-radius: 25px;
+    font-family: Montserrat-Bold;
+    font-size: 13px;
+    color: #572EE5;
+    letter-spacing: 0;
+    text-align: center;
+    padding: 0;
+    width: 100px;
+}
+
+ /* -------------------------- Menu hamburguesa -------------------------- */
+    #chkbox-menu {
+        display: none;
+    }
+    .div-menu {
+        width: 100%;
+    }
+    .menu-icon {
+        position: relative;
+        float: right;
+        margin: 4%;
+        margin-right: 10%;
+    }
+    .menu-icon span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: #572EE5;
+        border-radius: 16px;
+        position: absolute;
+        transform: rotate(0deg);
+        /*transform: .25s;*/
+        transform-origin: left center;
+        will-change: transform, opacity;
+    }
+    .menu-icon span:nth-child(1){
+        top: 0;
+    }
+    .menu-icon span:nth-child(2){
+        top: 9px;
+    }
+    .menu-icon span:nth-child(3){
+        top: 18px;
+    }
+    #chkbox-menu:checked ~ /*.label*/ .menu-icon span:nth-child(1){
+        transform: rotate(45deg);
+        width: 25px;
+    }
+    #chkbox-menu:checked ~  /*.label*/ .menu-icon span:nth-child(2){
+        opacity: 0 ;
+    }
+    #chkbox-menu:checked ~  /*.label*/ .menu-icon span:nth-child(3){
+        transform: rotate(-45deg);
+        width: 25px;
+    }
+        
+    .menu {
+        margin-top: -1000%;
+        transition: all 0.25s;
+        width: inherit;
+    }
+    #chkbox-menu:checked ~ .menu {
+        margin-top: 15%;
+    }  
+
+    #chkbox-menu:checked ~ .gifContainer{
+        position: unset;
+        margin-top: 200%;
+    }
+
+    #chkbox-menu:checked ~ .overlay{
+        display: none;
+    }
+
+    .menu ul li{
+        font-family: Montserrat-Bold;
+        font-size: 12px;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 45px;
+        /* box-shadow: inset 0 -1px #FFFFFF; */
+    }
+
+    .li-btn-agregar {
+        display: none;
+    }
+
+    .lineaMenu{
+        display: block;
+        height: 1px;
+        margin-left: 45%;
+        background:  rgba(255, 255, 255, 0.9);
+        /* box-shadow: inset 0 -1px #FFFFFF; */
+        width: 11%;
+    }
+   
+    /* .lineaMenu {
+        display: block;
+        border: 1px solid white;
+        width: 100px;
+    } */
+/* -------------------------- Fin Menu hamburguesa -------------------------- */
+/** ----------------------------------------------- Suggestion ----------------------------------------------- */
+.line {
+    /* opacity: 0.5; */
+    width: 100%;
+    display: none;
+    /* height: 0px; */
+    border: 1px solid #9CAFC3;
+}
+.suggest {
+    width: 100%;
+    /* position: absolute; */
+    left: 45px;
+    bottom: 35px;
+    /* align-self: flex-start; */
+    
+}
+
+.suggest ul{
+    /* display: flex; */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* flex-direction: column;
+    justify-content: flex-end; */
+    /* align-self: flex-end; */
+    /* align-self: flex-start; */
+    
+}
+
+.suggest ul li img {
+    height: 15px;
+    width: 15px;
+    align-self: center;
+    position: relative;
+    left: 5px;
+    padding-top: 5px;
+}
+
+.suggest ul li {
+    display: flex;
+}
+
+.suggest ul li:hover {
+    border-radius: 10px;
+    opacity: 0.7;
+    background: #9CAFC3;
+}
+
+.suggest ul li p:hover {
+    color: white;
+}
+
+.suggest ul li p{
+    width: 65%;
+    list-style:none;
+    font-family: Roboto-Regular;
+    font-size: 16px;
+    color: #9CAFC3;
+    text-align: left;
+    position: relative;
+    left: 30px;
+    /* align-self: flex-end; */
+    /* align-self: flex-end; */
+     /* align-self: flex-start;  */
+}
+
+/** ----------------------------------------------- Fin Suggestion ----------------------------------------------- */
+
+.lineSectionGif {
+    border: 1px solid #9CAFC3;
+    width: 20%;
+    position: relative;
+    left: 40%;
+    opacity: 0.5;
+    margin-top: 20px;
+    display: none;
+}
+/** ----------------------------------------------- Seccion Favoritos ----------------------------------------------- */
+
+    .favoritos {
+        display: none;
+        line-height: 25px;
+        padding-bottom: 100px;
+        padding-top: 15px;
+        /* padding-top: 100px; */
+    }
+
+    .favoritos .img-favs{
+        text-align: center;
+    }
+
+    .favoritos h1{
+        font-family: Montserrat-Bold;
+        font-size: 25px;
+        color: #572EE5;
+        text-align: center;
+        line-height: 30px;
+        padding-bottom: 6%;
+    }
+
+    .favoritos .titleSinContenido{
+        font-family: Montserrat-Bold;
+        font-size: 22px;
+        color: #50E3C2;
+        text-align: center;
+        line-height: 33px;
+        padding-bottom: 13.4%;
+    }
+
+    .sectionGifsFav {
+        padding-top: 20px;
+        left: 0;
+        margin-left: 5%;
+    }
+
+    /* .favoritos .gifContainer {
+        width: 377px;
+        height: 299px;
+        margin: 0px;
+        border: 0;
+    } */
+
+    /* .favoritos .btn-fav{
+        width: 32px;
+        height: 32px;
+    } */
+
+/** ----------------------------------------------- Fin Seccion Favoritos ----------------------------------------------- */
+
+
+/** ----------------------------------------------- Seccion MisGifos ----------------------------------------------- */
+
+.misGifos {
+    display: none;
+    line-height: 25px;
+    padding-bottom: 100px;
+    padding-top: 15px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+
+.misGifos div{
+    text-align: center;
+    /* align-self: center; */
+    /* vertical-align: top; */
+    /* justify-self: center; */
+    /* align-content: center; */
+}
+
+.misGifos h1{
+    font-family: Montserrat-Bold;
+    font-size: 25px;
+    color: #572EE5;
+    text-align: center;
+    line-height: 30px;
+    padding-bottom: 6%;
+}
+
+.misGifos .titleSinContenido{
+    font-family: Montserrat-Bold;
+    font-size: 22px;
+    color: #50E3C2;
+    text-align: center;
+    line-height: 33px;
+    padding-bottom: 13.4%;
+}
+
+/* .sectionGifsMisGifos{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left: 6%;
+} */
+
+/* .misGifos .btn-fav{
+    width: 32px;
+    height: 32px;
+} */
+
+
+/** ----------------------------------------------- Fin Seccion MisGifos ----------------------------------------------- */
+/** ----------------------------------------------- Seccion agregarGifos ----------------------------------------------- */
+.agregarGifos {
+    display: none;
+}
+
+.img-camara {
+    display: none;
+}
+.pasos {
+    display: none;
+}
+.padrelineaAzul {
+    display: none;
+}
+.record-actions {
+    display: none;
+}
+/** ----------------------------------------------- Fin Seccion agregarGifos ----------------------------------------------- */
+
+/** ----------------------------------------------- Fin Header ----------------------------------------------- */
+
+/** ----------------------------------------------- Trendings ----------------------------------------------- */
+.seccionTrendigs {
+    background: #F3F5F8;
+}
+
+.seccionTrendigs h2 {
+    font-family: Montserrat-Bold;
+    font-size: 25px;
+    color: #572EE5;
+    text-align: center;
+    line-height: 30px;
+}
+
+.seccionTrendigs p {
+    font-family: Roboto-Regular;
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+}
+
+
+.gifContainer .gif {
+    width: 156px;
+    height: 120px;
+    padding: 10px;
+}
+
+.maxGif { 
+    /* align-self: center; */
+    /* width: 695px;
+    height: 385px; */
+    /* width: 340px;
+    height: 200px; */
+}
+
+.maxGifBackground {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    /* top: 160px; */
+    /* left: 355px; */
+    padding-left: 2%;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+/* .maxGifBackground .fav {
+    bottom: 2px;
+    left: 2px;
+} */
+
+.maxGifBackground .cruzMax{
+    position: absolute;
+    left: 85%;
+    bottom: 87.5%;
+}
+
+.maxGifUser {
+    font-family: Roboto-Regular;
+    font-size: 18px;
+    color: #000000;
+    height: 22px;
+    width: 75%;
+}
+
+.maxGifTitle {
+    font-family: Roboto-Bold;
+    font-size: 16px;
+    color: #000000;
+    width: 75%;
+    height: 19px;
+}
+
+.fav{
+    position: initial;  
+    width: 32px;
+    margin-top: -25px;
+    margin-left: 250px;
+    margin-left: 70%;
+    /* left: 75%;  
+    bottom: 32.5%;   */
+}
+
+.download{
+    position: initial;
+    width: 32px;
+    margin-top: -32px;
+    margin-left: 300px;
+    margin-left: 82%;
+    /* left: 85%;  
+    bottom: 32.5%;  */
+}
+
+.GIFOS{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.btn-slider {
+    align-self: center;
+    outline: none;
+}
+
+.btn-slider img {
+    width: 15px;
+    height: 15px;
+}
+
+.gifs .gifContainer{
+    width: 243px;
+    height: 187px;
+}
+
+.gifs .gifContainer .gif{
+    width: 243px;
+    height: 187px;
+}
+
+.gifs .gifContainer .overlay{
+    width: 243px;
+    height: 187px;
+}
+
+
+
+/** ----------------------------------------------- OVERLAY ----------------------------------------------- */
+
+ .sectionGifs {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    flex-direction: row;
+  }
+
+.gifs {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    /* justify-content: space-around; */
+    flex-direction: row;
+  } 
+  
+  .gifContainer {
+    /* width: 650px;
+    height: 400px; */
+    position: relative;
+    overflow: hidden;
+    width: 156px;
+    height: 120px;
+    /* margin: 1em; */
+    /* overflow: hidden; */
+  }
+  
+  .overlay {
+    width: 156px;
+    height: 120px;
+    position: absolute;
+    display: flex;
+    margin: 10px;
+    opacity: 0.7;
+    background: #572EE5;
+    /* left: 0; */
+    /* top: 100%; */
+    /*transform: translate(-50px, 0);
+      -webkit-transform: translate(0,-350px);
+      -o-transform: translate(0,-350px); 
+      -moz-transform: translate(0,-350px);*/
+  
+    /* transition: 1s; */
+  }
+  
+  /* .gifContainer .overlay {
+    top: 0%;
+  } */
+  .gifContainer:hover .overlay {
+    top: 0%;
+  }
+  
+
+  .insideOverlay{
+    width: 16px;
+    height: 16px;
+    margin: 5px 8px;
+    background: #ffffff;
+    align-content: flex-end;
+    opacity: 1;
+    border-radius: 6px;
+  }
+  .btn-fav .active{
+      width: 22px;
+      height: 22px;
+  }
+
+  .overlay p{
+    color: #ffffff;
+    align-self: flex-end;
+    position: absolute;
+    left: 5px;
+    font-size: 13px;
+    text-align: start;
+    bottom: 10px;  
+    font-family: Roboto-Bold;
+}
+
+  .overlay h1{
+    color: #ffffff;
+    font-family: Roboto-Regular;
+    align-self: flex-end;
+    position: absolute;
+    padding: 0;
+    text-align: start;
+    left: 5px;
+    bottom: 50px;
+    width: 250px;
+    font-size: 7px;
+}
+
+  .insideOverlay:hover {
+      opacity: 0.7;
+  }
+
+/** ----------------------------------------------- Fin OVERLAY ----------------------------------------------- */
+/** ----------------------------------------------- Fin Trendings ----------------------------------------------- */
+
+/** ----------------------------------------------- Footer ----------------------------------------------- */
+
+.footer ul{
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    padding: 40px 0;
+    margin-left: 30%;
+}
+
+.footer li {
+    padding: 10px;
+}
+
+.redSocial{
+    align-self: flex-end;
+    position: relative;
+    right: 112px;
+    /* margin-left: -100px; */
+}
+
+.footer a{
+    color: #9CAFC3;
+}
+
+.footer p {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+
+/** ----------------------------------------------- Fin Footer ----------------------------------------------- */

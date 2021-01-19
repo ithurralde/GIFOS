@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFOS</title>
+    <link rel="stylesheet" href="styles/light-theme-styles-mobile.css">
+    <link rel="stylesheet" href="styles/light-theme-styles-desktop.css">
+    <link rel="stylesheet" href="styles/dark-theme-styles.css">
+    <script src="https://use.fontawesome.com/97a921e90a.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+</head>
+<body class="content">
+    <header>
+        <div class="bloqueAzul header"></div>
+        <section class="logoYlista">
+            <section class="logo">
+                <img class="btn-changeTheme" src="images/logo-desktop.svg" alt="imagen_logo">
+            </section>
+            <section class="div-menu">
+                <input type="checkbox" id="chkbox-menu">
+                <label for="chkbox-menu" class="menu-icon">
+                    <span class="span1-menu"></span>
+                    <span ></span>
+                    <span class="span3-menu"></span>
+                </label>
+                <nav class="menu">
+                    <ul>
+                        <li class="nocturno">Modo Nocturno</li>
+                        <li class="lineaMenu"></li>
+                        <li class="btn-favs">Favoritos</li>
+                        <li class="lineaMenu"></li>
+                        <li class="btn-misGifos">Mis GIFOS</li>
+                        <li class="lineaMenu"></li>
+                        <!--<li><img src="/GIFOS/images/button-crear-gifo.svg" alt="agregar gifs"></li>-->
+                        <li class="li-btn-agregar"><img class="btn-agregar" src="images/button-crear-gifo.svg" alt="agregar gifs"></li>
+                    </ul>
+                </nav>
+            </section>
+        </section>
+        <section class="btn-menu home">
+            <h1>Inspírate, busca, guarda, y crea</h1>
+            <h1>los mejores <span class= wordGIFOS>GIFOS</span></h1>
+            <!--<img src="/GIFOS/images/ilustra_header.svg" alt="imagen bienvenida">-->
+            <img class="imgBienvenida" src="images/ilustra_header.svg" alt="imagen bienvenida">
+            <div class="searchInput">
+                <input class="inputText" type="text" placeholder="Busca GIFOS y más"> 
+                <!--<button class="buscar"><img  src="/GIFOS/images/icon-search.svg" alt="imagen busqueda"></button>-->
+                <button class="buscar"><img class="img-lupa" src="images/icon-search.svg" alt="imagen busqueda"></button>
+                <div class="line"></div>
+                <div class="suggest"></div>   
+            </div>
+            <div class="sectionGifs">
+                <div class="lineSectionGif"></div>
+            </div>
+            <div class="verMas">
+                <p>Ver Más</p>
+            </div>
+            <h3>Trending:</h3>
+            <p>Reactions, Entertainment, Sports, Stckers, Artists</p>
+        </section>
+        <section class="favoritos">
+            <div class="img-favs"><img src="images/icon-favoritos.svg" alt="img-corazon"></div>
+            <h1>Favoritos</h1>
+            <div class="sectionGifsFav"></div>
+            <div class="verMasFavs">
+                <p>Ver Más</p>
+            </div>
+        </section>
+        <section class="misGifos">
+            <div class="img-misGifos"><img src="images/icon-mis-gifos.svg" alt="img-mis-gifos"></div>
+            <h1>Mis GIFOS</h1>
+            <div class="sectionGifsMisGifos"></div>
+        </section>
+        <section class="agregarGifos">
+            <div class="img-camara">
+                <div class="camara">
+                    <img class="imgCam" src="images/camara.svg" alt="img-camara">
+                    <img class="imgCamLuz" src="images/element-luz-camara.svg" alt="img-luz-camara"> 
+                </div>
+                <div class="escena">
+                    <div class="esquinas">
+                        <div class="supIzq"></div>
+                        <div class="postIzq"></div>                    
+                    </div>
+                        <div class="contenido">
+                            <h1>Aquí podrás</h1>
+                            <h1>crear tus propios <span>GIFOS</span></h1>
+                            <p>¡Crea tu GIFO en sólo 3 pasos!</p>
+                            <p>(sólo necesitas una cámara para grabar un video)</p>
+                            <!-- <div class="overlayVideo">
+                                <img class="img-overlayVideo" src="images/loader.svg" alt="img-carga-gif">
+                                <p>Estamos subiendo tu GIFO</p>
+                                <img class="icon-download" src="images/icon-download.svg" alt="icon-download">
+                                <img class="icon-link-normal" src="images/icon-link-normal.svg" alt="icon-link-normal">
+                            </div>     -->
+                            <video></video>
+                            <div class="overlayVideo">
+                                <img class="img-overlayVideo" src="images/loader.svg" alt="img-carga-gif">
+                                <p>Estamos subiendo tu GIFO</p>
+                                <img class="icon-download" src="images/icon-download.svg" alt="icon-download">
+                                <img class="icon-link-normal" src="images/icon-link-normal.svg" alt="icon-link-normal">
+                            </div>   
+                        </div>
+                    <div class="esquinas">
+                        <div class="supDer"></div>
+                        <div class="postDer"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pasos">
+                <ul>
+                    <li class="numbers n1"><p>1</p></li>
+                    <li class="numbers n2"><p>2</p></li>
+                    <li class="numbers n3"><p>3</p></li>
+                </ul>
+                <img class="pelicula" src="images/pelicula.svg" alt="img-cinta">
+            </div>
+            <div class="padrelineaAzul">
+                <div class="lineaAzul"></div>
+            </div>
+            <div class="record-actions">
+                <div class="comenzar"><p>COMENZAR</p></div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="seccionTrendigs">
+            <h2>Trending GIFOS:</h2>
+            <p>Mirá los últimos GIFO de nuestra comunidad.</p>
+            <section class="GIFOS">
+                <button type="button" class="btn-slider left"> <img src="images/button-slider-left-hover.svg" alt="btn-slider-left"></button>
+                <!-- Seccion creada para los gifs-->
+                <div class="gifs"></div>
+                <button type="button" class="btn-slider right"> 
+                    <img src="images/button-slider-right-hover.svg" alt="btn-slider-right">
+                </button>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <section class="footer">
+            <ul>
+                <li>Compartir en:</li>
+                <li class="redSocial"><a href="https://www.facebook.com/" target="_blank"><span class="fa fa-facebook fa-lg"></span></a></li>  
+                <li class="redSocial"><a href="https://www.twitter.com/" target="_blank"><span class="fa fa-twitter fa-lg"></span></a></li>
+                <li class="redSocial"><a href="https://www.instagram.com/" target="_blank"><span class="fa fa-instagram fa-lg"></span></a></li>  
+            </ul>
+            <p>© GIFOS 2020 All Rights Reserved.</p>
+        </section>
+        <div class="bloqueAzul footer"></div>
+    </footer>
+    <!-- Scripts JS -->
+    <!-- No anda en la gt, me comi una carpeta 
+        <script src="/GIFOS/javaScript/GIFOS.js"></script>
+        <script src="/GIFOS/javaScript/nocturnoDiurno.js"></script>
+    -->
+    <script src="javaScript/GIFOS.js"></script>
+    <script src="javaScript/nocturnoDiurno.js"></script>
+    <script src="javaScript/suggestions.js"></script>
+    <script src="javaScript/favoritos.js"></script>
+    <script src="javaScript/home.js"></script>
+    <script src="javaScript/misGifos.js"></script>
+    <script src="javaScript/agregarMisGifos.js"></script>
+</body>
+</html>

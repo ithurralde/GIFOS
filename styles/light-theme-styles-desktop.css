@@ -1,0 +1,1068 @@
+
+
+
+
+@media only screen and (min-width: 1220px) and (max-width: 1920px) {
+    /** ----------------------------------------------- Header ----------------------------------------------- */
+    .logoYlista {
+        display: flex;
+        justify-content: space-around;
+        width: inherit;
+        padding-top: 15px;
+    }
+    
+    ul li {
+        list-style:none;
+    }
+    
+    .bloqueAzul{
+        background: #572EE5;
+        height: 5px;
+        width: 100%;
+    }
+    
+    .menu ul {
+        background: rgba(87,46,229,0.90);
+        width: 500px;
+        margin: 0;
+        position: static;
+        padding-bottom: 0;
+    }
+    
+    .btn-agregar {
+        display: none;
+    }
+    
+    .menu li {
+        font-family: Montserrat;
+        font-size: 13px;
+        color: #ffffff;
+        letter-spacing: 0;
+        text-align: center;
+        }
+    
+    .btn-menu{
+        font-family: Montserrat-Bold;
+        font-size: 18px;
+        color: #572EE5;
+        text-align: center;
+        line-height: 25px;
+        padding: 70px;
+    }
+    .btn-menu h1 {
+        font-size: 40px;
+        padding: 15px;
+    }
+    
+    .btn-menu span {
+        color: #50E3C2;
+    }
+    
+    .btn-menu h3 {
+        padding-top: 100px;
+        color: #572EE5;
+    }
+    
+    .btn-menu p{
+        font-family: Montserrat-Medium;
+        font-size: 16px;
+        padding-top: 10px;
+    }
+    
+    .imgBienvenida {
+        width: 389px;
+        height: 188px; 
+    }
+    
+    .searchInput {
+        display: flex;
+        margin: -7px 0 25px 30%;
+        padding: 0px 10px;
+        border: 1px solid #572EE5;
+        border-radius: 30px;
+        position: static;
+        width: 40%;
+        /* height: 40px; */
+        flex-wrap: wrap;
+        height: 100%;
+        /* justify-content: space-between; */
+    }
+    
+    .inputText {
+        height: 80%;
+        width: 75%;
+        font-size: 19px;
+        align-self: center;
+        padding-left: 30px;
+        position: relative;
+        left: 5px;
+        outline: none;
+    
+        font-family: Roboto-Regular;
+        color: #000000;
+        text-align: left;
+    }
+    
+    .searchInput img {
+        /* padding-right: 5px; */
+    }
+    
+    /* .sectionGifs {
+        display: inline;
+    } */
+    
+    .sectionGifs .noSearch{
+        /* justify-self: center;
+        text-align: center; */
+        align-self: center;
+        position: relative;
+        left: 44%;
+    }
+    
+    .sectionGifs p{
+        width: 100%;
+        font-family: Montserrat-Bold;
+        font-size: 22px;
+        color: #50E3C2;
+        text-align: center;
+        line-height: 25px;
+    }
+    
+    .sectionGifs .gif {
+        width: 357px;
+        height: 275px;
+    }
+    
+    
+    .sectionGifs h1 {
+        width: 100%;
+        padding: 80px 0 40px;
+        font-family: Montserrat-Bold;
+        font-size: 35px;
+        color: #572EE5;
+        text-align: center;
+        line-height: 30px;
+        margin: 0;
+    }
+    
+    .buscar {
+        height: 35px;
+        width: 35px;
+        background: transparent;
+        align-self: center;
+        outline: none;
+    }
+    
+    .verMas{
+        display: none;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .verMas p{
+        border: 1px solid #572EE5;
+        border-radius: 25px;
+        font-family: Montserrat-Bold;
+        font-size: 13px;
+        color: #572EE5;
+        letter-spacing: 0;
+        text-align: center;
+        padding: 0;
+        width: 100px;
+    }
+    
+    .verMasFavs {
+        display: none;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .verMasFavs p{
+        border: 1px solid #572EE5;
+        border-radius: 25px;
+        font-family: Montserrat-Bold;
+        font-size: 13px;
+        color: #572EE5;
+        letter-spacing: 0;
+        text-align: center;
+        padding: 0;
+        width: 100px;
+    }
+    
+    
+        /* -------------------------- Menu hamburguesa -------------------------- */
+        .menu-icon {
+            display: none;
+        }
+    
+        #chkbox-menu:checked ~ .menu {
+            margin-top: 30px;
+        }
+    
+        .div-menu {
+            width: 48%;
+        }
+    
+        .menu {
+            display: block;
+            margin-top: 0;
+            width: 100%;
+            height: 44px;
+        }
+    
+        .menu ul {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            background: #ffffff;
+        }
+    
+        .menu ul li img{
+            display: block;
+        }
+    
+        .li-btn-agregar {
+            display: block;
+        }
+    
+        .menu ul li {
+            align-self: center;
+            color: #572EE5;
+            text-transform: uppercase;
+        }
+        .menu li {
+            font-family: Montserrat;
+            font-size: 13px;
+            color: #572EE5;
+            letter-spacing: 0;
+            text-align: center;
+        }
+    
+        .lineaMenu {
+            display: none;
+        }
+    
+        /* -------------------------- Fin Menu hamburguesa -------------------------- */
+        /** ----------------------------------------------- Suggestion ----------------------------------------------- */
+    .line {
+        /* opacity: 0.5; */
+        width: 100%;
+        display: none;
+        /* height: 0px; */
+        border: 1px solid #9CAFC3;
+    }
+    .suggest {
+        width: 100%;
+        /* position: absolute; */
+        left: 45px;
+        bottom: 35px;
+        /* align-self: flex-start; */
+        
+    }
+    
+    .suggest ul{
+        /* display: flex; */
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        /* flex-direction: column;
+        justify-content: flex-end; */
+        /* align-self: flex-end; */
+        /* align-self: flex-start; */
+        
+    }
+    
+    .suggest ul li img {
+        height: 15px;
+        width: 15px;
+        align-self: center;
+        position: relative;
+        left: 5px;
+        padding-top: 5px;
+    }
+    
+    .suggest ul li {
+        display: flex;
+    }
+    
+    .suggest ul li:hover {
+        border-radius: 10px;
+        opacity: 0.7;
+        background: #9CAFC3;
+    }
+    
+    .suggest ul li p:hover {
+        color: white;
+    }
+    
+    .suggest ul li p{
+        width: 65%;
+        list-style:none;
+        font-family: Roboto-Regular;
+        font-size: 16px;
+        color: #9CAFC3;
+        text-align: left;
+        position: relative;
+        left: 30px;
+        /* align-self: flex-end; */
+        /* align-self: flex-end; */
+         /* align-self: flex-start;  */
+    }
+    
+    /** ----------------------------------------------- Fin Suggestion ----------------------------------------------- */
+    
+    .lineSectionGif {
+        border: 1px solid #9CAFC3;
+        width: 20%;
+        position: relative;
+        left: 0%;
+        opacity: 0.5;
+        margin-top: 20px;
+        display: none;
+    }
+    /** ----------------------------------------------- Seccion Favoritos ----------------------------------------------- */
+    
+        .favoritos {
+            display: none;
+            line-height: 25px;
+            padding-bottom: 100px;
+            padding-top: 0;
+        }
+    
+        .favoritos .img-favs{
+            text-align: center;
+        }
+    
+        .favoritos h1{
+            font-family: Montserrat-Bold;
+            font-size: 25px;
+            color: #572EE5;
+            text-align: center;
+            line-height: 30px;
+            padding-bottom: 6%;
+            padding-top: 0;
+        }
+    
+        .sectionGifsFav {
+            padding-top: 0;
+        }
+    
+        .favoritos .titleSinContenido{
+            font-family: Montserrat-Bold;
+            font-size: 22px;
+            color: #50E3C2;
+            text-align: center;
+            line-height: 33px;
+            padding-bottom: 13.4%;
+        }
+    
+        /* .favoritos .gifContainer {
+            width: 377px;
+            height: 299px;
+            margin: 0px;
+            border: 0;
+        } */
+    
+        /* .favoritos .btn-fav{
+            width: 32px;
+            height: 32px;
+        } */
+    
+    /** ----------------------------------------------- Fin Seccion Favoritos ----------------------------------------------- */
+    
+    
+    /** ----------------------------------------------- Seccion MisGifos ----------------------------------------------- */
+    
+    .misGifos {
+        display: none;
+        padding-top: 0;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center; */
+    }
+    
+    .misGifos div{
+        text-align: center;
+        /* align-self: center; */
+        /* vertical-align: top; */
+        /* justify-self: center; */
+        /* align-content: center; */
+    }
+    
+    .misGifos h1{
+        font-family: Montserrat-Bold;
+        font-size: 25px;
+        color: #572EE5;
+        text-align: center;
+        line-height: 30px;
+        padding-bottom: 6%;
+    }
+    
+    .misGifos .titleSinContenido{
+        font-family: Montserrat-Bold;
+        font-size: 22px;
+        color: #50E3C2;
+        text-align: center;
+        line-height: 33px;
+        padding-bottom: 13.4%;
+    }
+    
+    /* .misGifos .gifContainer {
+        width: 377px;
+        height: 299px;
+    } */
+    
+    /* .sectionGifsMisGifos{
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        left: 6%;
+    } */
+    
+    /* .misGifos .btn-fav{
+        width: 32px;
+        height: 32px;
+    } */
+    
+    
+    /** ----------------------------------------------- Fin Seccion MisGifos ----------------------------------------------- */
+    /** ----------------------------------------------- Seccion agregarGifos ----------------------------------------------- */
+    .agregarGifos {
+        display: none;
+    }
+    
+    .img-camara {
+        display: flex;
+    }
+    
+    .camara {
+        display: flex;
+        position: relative;
+        left: 75px;
+    }
+    
+    .escena {
+        border: 1px solid #572EE5;
+        width: 60%;
+        height: 400px;
+        position: relative;
+        left: 80px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    /* .esquinas {
+        height: 360px;
+        width: 95%;
+        position: relative;
+        top: 20px;
+        left: 2.5%;
+        border: 2px solid #50E3C2;
+        display: flex;
+        justify-content: center;
+    } */
+    .esquinas{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* height: 25px;
+        width: 25px;
+        position: relative;
+        top: 20px;
+        left: 2.5%; */
+        /* display: flex;
+        justify-content: center; */
+        /* padding: 50px; */
+    }
+    
+    .supIzq{
+        border: 2px solid #50E3C2;
+        height: 25px;
+        width: 25px;
+        border-right-style:none;
+        border-bottom-style:none;
+        position: relative;
+        right: 130px;
+        top: 20px;
+    }
+    
+    .supDer{
+        border: 2px solid #50E3C2;
+        height: 25px;
+        width: 25px;
+        border-left-style:none;
+        border-bottom-style:none;
+        position: relative;
+        left: 130px;
+        top: 20px;
+    }
+    
+    .postIzq{
+        border: 2px solid #50E3C2;
+        height: 25px;
+        width: 25px;
+        border-right-style:none;
+        border-top-style:none;
+        justify-self: flex-end;
+        position: relative;
+        right: 130px;
+        bottom: 20px;
+    }
+    
+    .postDer{
+        border: 2px solid #50E3C2;
+        height: 25px;
+        width: 25px;
+        border-left-style:none;
+        border-top-style:none;
+        position: relative;
+        left: 130px;
+        bottom: 20px;
+    }
+    
+    .contenido {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        /* width: 480px;
+        height: 320px; */
+        /* align-self: center;
+        align-content: center; */
+        /* vertical-align: middle; */
+        /* text-align: center; */
+    }
+    
+    .contenido h1 {
+        font-family: Montserrat-Bold;
+        font-size: 35px;
+        color: #572EE5;
+        text-align: center;
+        /* align-content: flex-end; */
+        line-height: 35px;
+        padding : 5px;
+    }
+    .contenido span {
+        color: #50E3C2;
+    }
+    
+    .contenido p {
+        font-family: Roboto-Regular;
+        font-size: 20px;
+        color: #000000;
+        text-align: center;
+        align-content: flex-end;
+        line-height: 29px;
+        padding: 5px;
+    }
+    
+    
+    .overlayVideo {
+        display: flex;
+        flex-direction: column;
+        opacity: 0.6;
+        position: absolute;
+        background: #572EE5;
+        width: 427px;
+        height: 320px;
+        left: 11px;    
+    }
+    
+    .overlayVideo:hover{
+        opacity: 0.7;
+    }
+    
+    .overlayVideo p {
+        font-family: Montserrat-Bold;
+        font-size: 15px;
+        color: #FFFFFF;
+        text-align: center;
+        position: relative;
+        top: 40%;
+    }
+    
+    .img-overlayVideo {
+        position: relative;
+        top: 40%;
+    }
+    
+    .icon-download{
+        display: none;
+        position: absolute;
+        top: 1%;
+        left: 80%;
+    }
+    
+    .icon-download:hover{
+        opacity: 0.7;
+    }
+    
+    .icon-link-normal {
+        display: none;
+        position: absolute;
+        top: 1%;
+        left: 90%;
+    }
+    
+    .icon-link-normal:hover {
+        opacity: 0.1;
+    }
+    
+    .pasos {
+        display: flex;
+        justify-content: space-evenly;
+        padding-left: 23%;
+    
+        /* display: flex;
+        justify-content: center; */
+    }
+    
+    .pasos ul{
+        display: flex;
+        /* justify-content: center; */
+        padding-top: 30px;
+        position: relative;
+    }
+    
+    .pasos .numbers{
+        border: 1px solid #572EE5;
+        border-radius: 100%;
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        margin: 10px;
+    
+        /* padding-left: 15px; */
+        /* vertical-align: bottom; */
+    }
+    
+    .pasos .numbersPhase {
+        border-radius: 100%;
+        background: #572EE5;
+    }
+    
+    .pasos .numbersPhase p {
+        color: #ffffff;
+    }
+    
+    .pasos .liRepetirCaptura{
+        border: none;
+        position: absolute;
+        left: 180%;
+        top: 45px;
+    }
+    
+    .pasos .liRepetirCaptura p{
+        width: 157px;
+        vertical-align: middle;
+        box-shadow: inset 0 -3px #50E3C2;
+    
+    }
+    
+    .pasos .liCronometro {
+        display: none;
+        border: none;
+        position: absolute;
+        left: 180%;
+        top: 45px;
+    }
+    
+    .pasos .liCronometro p{
+        width: 157px;
+    }
+    
+    .pasos p{
+        font-family: Roboto-Medium;
+        font-size: 18px;
+        color: #572EE5;
+        text-align: center;
+        padding-top: 5px;
+    }
+    
+    .pasos img{
+        /* justify-items: flex-end; */
+        /* align-self: flex-end; */
+        /* justify-self: space-between; */
+    
+    
+        position: relative;
+        left: 15%;
+        /* position: relative;
+        left: 33%; */
+    }
+    
+    
+    
+    .padrelineaAzul {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .lineaAzul {
+        width: 65%;
+        border: 4px solid #572EE5;
+        border-radius: 6px;
+    }
+    
+    video {
+        display: none;
+        width: 448.547px;
+        height: 320px;
+    }
+    
+    .record-actions {
+        display: flex;
+        justify-content: center;
+        padding-top: 25px;
+    }
+    
+    .record:hover {
+        background: #572EE5;
+    }
+    
+    .record p:hover {
+        color: #ffffff;
+    }
+    
+    .record {
+        border: 1px solid #572EE5;
+        border-radius: 50px;
+        background: #ffffff;
+    }
+    
+    .record p{
+        font-family: Montserrat-Bold;
+        font-size: 13px;
+        color: #572EE5;
+        letter-spacing: 0;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .comenzar:hover {
+        background: #572EE5;
+    }
+    
+    .comenzar p:hover {
+        color: #ffffff;
+    }
+    
+    .comenzar {
+        border: 1px solid #572EE5;
+        border-radius: 50px;
+        background: #ffffff;
+    }
+    
+    .comenzar p{
+        font-family: Montserrat-Bold;
+        font-size: 13px;
+        color: #572EE5;
+        letter-spacing: 0;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .subirGifo:hover {
+        background: #572EE5;
+    }
+    
+    .subirGifo p:hover {
+        color: #ffffff;
+    }
+    
+    .subirGifo {
+        border: 1px solid #572EE5;
+        border-radius: 50px;
+        background: #ffffff;
+    }
+    
+    .subirGifo p{
+        font-family: Montserrat-Bold;
+        font-size: 13px;
+        color: #572EE5;
+        letter-spacing: 0;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    /** ----------------------------------------------- Fin Seccion agregarGifos ----------------------------------------------- */
+    
+    /** ----------------------------------------------- Fin Header ----------------------------------------------- */
+    
+    /** ----------------------------------------------- Trendings ----------------------------------------------- */
+    .seccionTrendigs {
+        background: #F3F5F8;
+    }
+    
+    .seccionTrendigs h2 {
+        font-family: Montserrat-Bold;
+        font-size: 25px;
+        color: #572EE5;
+        text-align: center;
+        line-height: 30px;
+    }
+    
+    .seccionTrendigs p {
+        font-family: Roboto-Regular;
+        font-size: 18px;
+        color: #000000;
+        text-align: center;
+    }
+    
+    
+    .gifContainer .gif {
+        width: 260px;
+        height: 200px;
+        padding: 10px;
+    }
+    
+    .maxGif { 
+        /* align-self: center; */
+        width: 695px;
+        height: 385px;
+    }
+    
+    .maxGifBackground {
+        position: fixed;
+        top: 0px;
+        display: flex;
+        /* top: 160px; */
+        /* left: 355px; */
+        padding-left: 16%;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+    }
+    
+    /* .maxGifBackground .fav {
+        bottom: 2px;
+        left: 2px;
+    } */
+    
+    .maxGifBackground .cruzMax{
+        position: absolute;
+        left: 1100px;
+        bottom: 80%;
+    }
+    
+    .maxGifUser {
+        font-family: Roboto-Regular;
+        font-size: 18px;
+        color: #000000;
+    }
+    
+    .maxGifTitle {
+        font-family: Roboto-Bold;
+        font-size: 19px;
+        color: #000000;
+    }
+    
+    .fav{
+        /* position: absolute;  
+        left: 800px;
+        bottom: 22%;   */
+        /* position: initial;
+        margin-top: -25px; */
+        margin-left: 600px;
+        border: 1px solid #CED7E1;
+        border-radius: 6px;
+        width: 32px;
+    }
+    
+    .fav:hover{
+        opacity: 0.7;
+    }
+    
+    .download{
+        /* position: absolute;
+        left: 850px;  
+        bottom: 22%; */
+        /* position: initial;
+        margin-top: -32px; */
+        margin-top: -34px;
+        margin-left: 650px;
+        border: 1px solid #CED7E1;
+        border-radius: 6px;
+        width: 32px;
+    }
+    
+    .download:hover{
+        opacity: 0.7;
+    }
+    
+    .GIFOS{
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+    
+    .btn-slider {
+        align-self: center;
+        outline: none;
+
+    }
+
+    .btn-slider img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .gifs .gifContainer{
+        width: 377px;
+        height: 299px;
+    }
+    
+    .gifs .gifContainer .gif{
+        width: 357px;
+        height: 275px;
+    }
+    
+    .gifs .gifContainer .overlay{
+        width: 357px;
+        height: 275px;
+    }
+    
+    
+    /** ----------------------------------------------- OVERLAY ----------------------------------------------- */
+    
+     .sectionGifs {
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: space-around; */
+        flex-direction: row;
+        justify-content: center;
+      }
+    
+    .gifs {
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+        /* justify-content: space-around; */
+        /* flex-direction: row; */
+      } 
+      
+      .gifContainer {
+        /* width: 650px;
+        height: 400px; */
+        position: relative;
+        overflow: hidden;
+        /* width: 377px;
+        height: 299px; */
+        width: 270px;
+        height: 210px;
+        /* margin: 1em; */
+        /* overflow: hidden; */
+      }
+      
+      .overlay {
+        /* width: 357px;
+        height: 275px; */
+        width: 260px;
+        height: 200px;
+        position: absolute;
+        display: flex;
+        margin: 10px;
+        opacity: 0.7;
+        background: #572EE5;
+        /* left: 0; */
+        /* top: 100%; */
+        /*transform: translate(-50px, 0);
+          -webkit-transform: translate(0,-350px);
+          -o-transform: translate(0,-350px); 
+          -moz-transform: translate(0,-350px);*/
+      
+        /* transition: 1s; */
+      }
+      
+      /* .gifContainer .overlay {
+        top: 0%;
+      } */
+      .gifContainer:hover .overlay {
+        top: 0%;
+      }
+      
+    
+      .insideOverlay{
+        width: 32px;
+        height: 32px;
+        margin: 5px 8px;
+        background: #ffffff;
+        align-content: flex-end;
+        opacity: 1;
+        border-radius: 6px;
+      }
+      .btn-fav .active{
+          width: 22px;
+          height: 22px;
+      }
+    
+      .overlay p{
+        color: #ffffff;
+        align-self: flex-end;
+        position: absolute;
+        left: 5px;
+        font-size: 21px;
+        text-align: start;
+        bottom: 5px;  
+        font-family: Roboto-Bold;
+    }
+    
+      .overlay h1{
+        color: #ffffff;
+        font-family: Roboto-Regular;
+        align-self: flex-end;
+        position: absolute;
+        padding: 0;
+        text-align: start;
+        left: 5px;
+        bottom: 50px;
+        width: 250px;
+        font-size: 15px;
+    }
+    
+      .insideOverlay:hover {
+          opacity: 0.7;
+      }
+    
+    /** ----------------------------------------------- Fin OVERLAY ----------------------------------------------- */
+    /** ----------------------------------------------- Fin Trendings ----------------------------------------------- */
+    
+    /** ----------------------------------------------- Footer ----------------------------------------------- */
+    
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: Roboto-Regular;
+        font-size: 13px;
+        color: #000000;
+        letter-spacing: 0;
+    }
+    
+    .footer ul {
+        display: flex;
+        margin: 0;
+        height: auto;
+        padding: 0;
+    }
+    
+    .footer li {
+        padding: 10px;
+    }
+    
+    .footer a{
+        color: #9CAFC3;
+    }
+    
+    .footer p{
+        padding: 0;
+    }
+    
+    .redSocial {
+        margin: 0;
+        right: 0;
+    }
+    /** ----------------------------------------------- Fin Footer ----------------------------------------------- */
+    }
