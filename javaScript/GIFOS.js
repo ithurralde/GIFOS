@@ -261,7 +261,10 @@ function maxBtnGif(gif, gifContainer, gifApi, btnFavMinimizado){
   download.classList = "download";
   cruz.classList = "cruzMax";
   div.classList.add("maxGifBackground");
-  cruz.setAttribute('src', "images/close.svg");
+  if (content.className === "content dark-theme")
+    cruz.setAttribute('src', "images/close-modo-noct.svg");
+  else
+    cruz.setAttribute('src', "images/close.svg");
   div.appendChild(gif);
   div.appendChild(cruz);
   div.appendChild(userName);
