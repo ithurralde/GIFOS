@@ -51,12 +51,6 @@ showTrendings = async (trendings, bool) => {
   }
 }
 
-function completarBugEstilosCorazonFav(imgFav, boolean){
-  if (boolean)
-    imgFav.style.padding = "7px";
-  else
-    imgFav.style.padding = "0px";
-}
 
 // agrega y elimina de favs un gif
 function cambiarFavsLocalStorage(gifApi, gif){
@@ -80,22 +74,18 @@ function cambiarFavsLocalStorage(gifApi, gif){
       gifRemove.remove();
     if (imgFav != null){
       imgFav.setAttribute('src', "images/icon-fav.svg");
-      completarBugEstilosCorazonFav(imgFav, false);
     }
     else{
       imgFavMaximizado.setAttribute('src', "images/icon-fav.svg");
-      completarBugEstilosCorazonFav(imgFavMaximizado, false);
     }
   }
   else{
     jsonLocalstorage.list.push(gifApi);
     if (imgFav != null){
       imgFav.setAttribute('src', "images/icon-fav-active.svg");
-      completarBugEstilosCorazonFav(imgFav, false);
     }
     else{
       imgFavMaximizado.setAttribute('src', "images/icon-fav-active.svg");
-      completarBugEstilosCorazonFav(imgFavMaximizado, true);
     }
   }
   localStorage.setItem("gifs", JSON.stringify(jsonLocalstorage));
@@ -105,11 +95,9 @@ function completarFav(btnFav, gifApi){
   const isFav = JSON.parse(localStorage.getItem("gifs"));
   if (isFav.list.find(element => element.id === gifApi.id)){
     btnFav.setAttribute('src', "images/icon-fav-active.svg");
-    // completarBugEstilosCorazonFav(btnFav, true);
   }
   else{
     btnFav.setAttribute('src', "images/icon-fav.svg");
-    completarBugEstilosCorazonFav(btnFav, false);
   }
 
 }
@@ -277,7 +265,6 @@ function maxBtnGif(gif, gifContainer, gifApi, btnFavMinimizado){
   content.appendChild(div);
 
 
-  // completarBugEstilosCorazonFav(btnFavMinimizado, true);
 
 
   cruz.addEventListener("click", () => {
@@ -287,7 +274,6 @@ function maxBtnGif(gif, gifContainer, gifApi, btnFavMinimizado){
     div.remove(cruz);
     if (gifContainer.parentNode.className !== "sectionGifsMisGifos"){
       completarFav(btnFavMinimizado, gifApi);
-      completarBugEstilosCorazonFav(btnFavMinimizado, false);
     }
   });
 
