@@ -278,16 +278,7 @@ ul li {
     #chkbox-menu:checked ~ .menu {
         margin-top: 15%;
     }  
-
-    #chkbox-menu:checked ~ .gifContainer{
-        position: unset;
-        margin-top: 200%;
-    }
-
-    #chkbox-menu:checked ~ .overlay{
-        display: none;
-    }
-
+    
     .menu ul li{
         font-family: Montserrat-Bold;
         font-size: 12px;

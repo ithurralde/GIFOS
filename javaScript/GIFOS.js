@@ -211,11 +211,19 @@ function completarOverlay(overlay, gifApi, gif, gifContainer, isMisGifos){
         gifsMisGifos.style.left = "0%"; 
       }
     });
-  
-  btnMax.addEventListener("click", () => {
-    console.log("entro papa");
-    maxBtnGif(gif, gifContainer, gifApi, btnFav);
-  });
+
+  let widthMaximo = content.clientWidth;
+  if (widthMaximo <= 768){
+    gifContainer.addEventListener("click", () => {
+      maxBtnGif(gif, gifContainer, gifApi, btnFav);
+    });
+  }
+  else{
+    btnMax.addEventListener("click", () => {
+      console.log("entro papa");
+      maxBtnGif(gif, gifContainer, gifApi, btnFav);
+    });
+}
 }
 
 
@@ -291,11 +299,10 @@ function maxBtnGif(gif, gifContainer, gifApi, btnFavMinimizado){
   });
 }
 
-async function addGifs(newGif, clasePadre, isMisGifos /*,claseHijo*/){
+async function addGifs(newGif, clasePadre, isMisGifos){
   gif = document.createElement('img');
   gif.setAttribute('src', newGif.images.original.url);
   gif.classList.add("gif");
-  // document.write(gif);
   // estos divs son para el overlay
   overlay = document.createElement("div");
   overlay.style.display = "flex"; // estos estilos es para que se vean las imagenes del lado derecho
@@ -306,14 +313,9 @@ async function addGifs(newGif, clasePadre, isMisGifos /*,claseHijo*/){
   gifContainer = document.createElement("div");
   gifContainer.classList.add("gifContainer");
   completarOverlay(overlay, newGif, gif, gifContainer, isMisGifos);
-
-  // onClickGif = document.querySelectorAll(".gif");
-  // trending.images.original.url: se obtiene de la documentacion de la api para 
-  // encontrar los url de cada gif
-  await gifContainer.appendChild(gif/*, claseHijo*/);
+  await gifContainer.appendChild(gif);
   await gifContainer.appendChild(overlay);
   await clasePadre.appendChild(gifContainer);
-  // recorrer(gif);
 }
 
 // eventos para el boton slider de la izquierda
