@@ -16,7 +16,7 @@ if (JSON.parse(localStorage.getItem("misGifos")) == null){
   localStorage.setItem("misGifos", JSON.stringify(jsonLocalstorage));
 }
 
-// localStorage.clear();
+
 
 const getGifs = async () => {
   const response = await fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}`)
@@ -32,7 +32,7 @@ showTrendings = async (trendings, bool) => {
     fin = contador+3;
     gifs.innerHTML = '';
     for (contador; contador < fin; contador++)
-      await addGifs(trendings[contador], gifs, false/*btnSliderRight*/);
+      await addGifs(trendings[contador], gifs, false);
   }
   else{
     fin = contador-3;
@@ -41,7 +41,7 @@ showTrendings = async (trendings, bool) => {
       gifs.innerHTML = '';
       for (contador; contador < fin; contador++){
         console.log("acaaa: " + trendings[contador].url);
-        await addGifs(trendings[contador], gifs, false/*btnSliderRight*/);
+        await addGifs(trendings[contador], gifs, false);
       }
     }
     else {
@@ -71,24 +71,6 @@ function cambiarFavsLocalStorage(gifApi, gif){
     const gifRemove = gif.parentNode; // parentNode seria el gifContainer
     if (gif.parentNode.parentNode.className === "sectionGifsFav")
       gifRemove.remove();
-    // else if (gif.parentNode.className === "maxGifBackground") {
-    //   const gifContainerBusqueda = document.querySelectorAll(".sectionGifsFav .gifContainer");
-    //   console.log(gifContainerBusqueda.length)
-    //   for (let i = 0; i < gifContainerBusqueda.length; i++){
-    //     console.log(gifContainerBusqueda[i].firstChild.src);
-    //     console.log(gifContainerBusqueda[i].className);
-    //     console.log(gifContainerBusqueda[i].parentNode.className);
-    //     if (gifContainerBusqueda[i].firstChild.src === gifApi.images.original.url){
-    //       console.log(gifContainerBusqueda[i]);
-    //       console.log("adadsada");
-    //       console.log(gifContainerBusqueda[i].className);
-    //       console.log(gifContainerBusqueda[i].parentNode.className);
-    //       // if (gifContainerBusqueda[i].parentNode.className === "sectionGifsFav")
-    //       //   gifContainerBusqueda[i].remove();
-    //     }
-    //   }
-
-    // }
     if (imgFav != null){
       imgFav.setAttribute('src', "images/icon-fav.svg");
     }
@@ -149,11 +131,6 @@ function completarOverlay(overlay, gifApi, gif, gifContainer, isMisGifos){
   btnDownload.classList.add("insideOverlay");
   btnDownload.classList.add("btn-download");
 
-  // const isFav = JSON.parse(localStorage.getItem("gifs"));
-  // if (isFav.list.find(element => element.id === gifApi.id))
-  //   btnFav.setAttribute('src', "images/icon-fav-active.svg");
-  // else
-  //   btnFav.setAttribute('src', "images/icon-fav.svg");
   const menuHamburguesa1 = document.querySelector(".span1-menu");
   const menuHamburguesa3 = document.querySelector(".span3-menu");
   menuHamburguesa1.addEventListener("click", () => {
@@ -354,8 +331,7 @@ getGifs()
 let limitSearch = 12;
 const imgLupa = document.querySelector(".buscar");
 const sectionSearch = document.querySelector(".sectionGifs")
-let inputSearch = document.querySelector(".inputText"); // creo esta variable para el caso de 
-// apretar enter en vez de la lupita (para buscar gifs)
+let inputSearch = document.querySelector(".inputText");
 
 
 const searchApiGif = async (input) => {
@@ -374,7 +350,6 @@ async function showSearch(search){
     console.log("nombrecito: " + nameSearch.textContent);
     sectionSearch.appendChild(nameSearch);
     for (let i = 0; i < search.length; i++){
-      // console.log("ASDASDSAD: " + search[i].url);
       await addGifs(search[i], sectionSearch, false);
     }
     // este if es para que se vaya el boton de ver mas cuando ya hay 50 mostrandose
@@ -394,16 +369,6 @@ async function showSearch(search){
     sectionSearch.appendChild(textNoSearch);
     verMas.style.display = "none";
   }
-  // search.forEach(element => {
-  //   console.log("RECONTRA ACAAAA: " + element.url);
-  //   addGifs(element, sectionSearch);
-
-
-
-
-
-  //   // recorrer(element);
-  // });
 }
 const lineSectionGif = document.querySelector(".lineSectionGif");
 //boton de ver mas gifs en la busqueda de 12 gifs
@@ -475,39 +440,9 @@ inputSearch.addEventListener("keydown", event => {
   if (event.keyCode == 13){
     limitSearch = 12;
     searchGif();
-  // lineSectionGif.style.display = "block";
   }
 })
 
  /**
   * Fin Buscar gifs
   */
-
-  /**
-   * Recorrer gifs para saber a cual de todos le hago click para el overlay
-   */
-
-  // async function recorrer(onClickGif){
-  //     // debugger;
-  //     console.log("el for");
-  //     onClickGif.addEventListener("click", () => {
-  //       console.log("tomo el click");
-  //       onClickGif.nextElementSibling.classList.toggle("overlay");
-  //       onClickGif.nextElementSibling.style.display = "flex";
-  //       // onClickGif.nextElementSibling.
-  //       // if (onClickGif.style.width !== "500px")
-  //       //   onClickGif.style.width ="500px";
-  //       // else
-  //       //   onClickGif.style.width = "357px";
-  //     });
-
-  //     onClickGif.nextElementSibling.addEventListener("click", () => {
-  //       onClickGif.nextElementSibling.classList.toggle("overlay");
-  //       onClickGif.nextElementSibling.style.display = "none";
-  //     })
-  //   // });
-  // }
-
-  /**
-   * Fin de recorrer gifs
-   */

@@ -1,9 +1,9 @@
 const home = document.querySelector(".logo");
-// const loadHome = document.querySelector(".btn-menu");
+
 const inputGifs = document.querySelector(".inputText");
 const verMasMG = document.querySelector(".verMas");
 const iconLupa = document.querySelector(".img-lupa");
-// const imagenLupa = document.querySelector(".img-lupa");
+
 
 home.addEventListener("click", () => {
     if (content.className === "content dark-theme")
@@ -23,5 +23,5 @@ home.addEventListener("click", () => {
         iconLupa.setAttribute('src', "images/icon-search-modo-noct.svg");
     else
         iconLupa.setAttribute('src', "images/icon-search.svg");
-    // imagenLupa.setAttribute('src', "images/icon-search.svg");
+
 });

@@ -18,7 +18,7 @@ const iconLinkOverlay = document.querySelector(".icon-link-normal");
 
 const btnStop = document.createElement('button');
 btnStop.classList.add("record");
-// btnComenzar.style.display = "none";
+
 const textStop = document.createElement("p");
 textStop.textContent = "FINALIZAR";
 btnStop.appendChild(textStop);
@@ -31,12 +31,6 @@ pBtnSubirGifo.textContent = "SUBIR GIFO";
 btnSubirGifo.appendChild(pBtnSubirGifo);
 recordActions.appendChild(btnSubirGifo);
 
-// const liRepetirCaptura = document.createElement("li");
-// const pRepetirCaptura = document.createElement("p");
-// pRepetirCaptura.textContent = "REPETIR CAPTURA";
-// liRepetirCaptura.appendChild(pRepetirCaptura);
-// liRepetirCaptura.classList.add("liRepetirCaptura");
-// pasos.children[0].appendChild(liRepetirCaptura);
 
 const liCronometro = document.createElement("li");
 const pliCronometro = document.createElement("p");
@@ -59,10 +53,6 @@ let pDown = contenido.children[3];
 btnComenzar.addEventListener("click", () => {
      if (numero1.className !== "numbers n1 numbersPhase")
     numero1.classList.toggle("numbersPhase");
-    // const h1Up = contenido.children[0];
-    // const h1Down = contenido.children[1];
-    // const pUp = contenido.children[2];
-    // const pDown = contenido.children[3];
     getVideo(h1Up, h1Down, pUp, pDown);
 });
 
@@ -86,10 +76,10 @@ btnAgregar.addEventListener("click", ()  => {
     loadFav.style.display = "none";
     loadMisGifos.style.display = "none";
     loadTrendings.style.display = "none";
-    // btnRecord.style.display = "none";
+
     btnStop.style.display = "none";
     btnSubirGifo.style.display = "none";
-    // liRepetirCaptura.style.display = "none";
+
     loadAgregarGifos.style.display = "inline";
 
     h1Up.textContent = "Aquí podrás";
@@ -119,8 +109,7 @@ btnAgregar.addEventListener("click", ()  => {
         numero2.classList.toggle("numbersPhase");
     if (numero3.className === "numbers n3 numbersPhase")
         numero3.classList.toggle("numbersPhase");
-    // if (video.className === "overlayVideo")
-    //     video.classList.toggle("overlayVideo");
+
 
     imgOverlayVideo.setAttribute('src', "images/loader.svg");
     iconDownloadOverlay.style.display = "none";
@@ -156,9 +145,9 @@ async function grabar(stream, video, h1Up, h1Down, pUp, pDown, liRepetirCaptura,
     btnRecord.addEventListener("click", async () => {
         await recorder.startRecording();
         btnStop.style.display = "block";
-        // btnRecord.style.display = "none";
+
         btnRecord.style.display = "none";
-        // video.classList.toggle("overlayVideo");
+
         btnRecord.remove();
 
         //agregar cronometro
@@ -166,7 +155,6 @@ async function grabar(stream, video, h1Up, h1Down, pUp, pDown, liRepetirCaptura,
             // para mostrar el tiempo 0:0:0
             pliCronometro.textContent = `${contador_horas}:${contador_minutos}:${contador_segundos}`;
             cronometro = setInterval(() => {
-                // liCronometro.style.display = "block";
                 if (contador_segundos === 60){
                     contador_segundos = 0;
                     contador_minutos++;
@@ -178,7 +166,6 @@ async function grabar(stream, video, h1Up, h1Down, pUp, pDown, liRepetirCaptura,
                 contador_segundos++;
                 // para ir actualizando el cronometro a tiempo real
                 pliCronometro.textContent = `${contador_horas}:${contador_minutos}:${contador_segundos}`;
-                // liCronometro.style.display = "block";
                 console.log("horas: " + contador_horas);
                 console.log("minutos: " + contador_minutos);
                 console.log("segundos: " + contador_segundos);
@@ -187,7 +174,6 @@ async function grabar(stream, video, h1Up, h1Down, pUp, pDown, liRepetirCaptura,
 
     btnAgregar.addEventListener("click", () => {
         btnRecord.style.display = "none";
-        // liRepetirCaptura.style.display = "none";
         liRepetirCaptura.remove();
     });
 
@@ -196,10 +182,8 @@ async function grabar(stream, video, h1Up, h1Down, pUp, pDown, liRepetirCaptura,
 }
 
 
-// async function stop(btnStop, recorder, h1Up, h1Down, pUp, pDown, btnSubirGifo, liRepetirCaptura){
 async function stop(recorder, h1Up, h1Down, pUp, pDown, liRepetirCaptura){
     btnStop.addEventListener('click', () => {
-    // pasos.children[0].appendChild(cronometro);
     clearInterval(cronometro);
     console.log("a ver el cronometrito locura mistica: " + cronometro);
     liCronometro.style.display = "none";
@@ -284,34 +268,22 @@ function resetRecord(h1Up, h1Down, pUp, pDown){
         video.srcObject = stream;
         video.play();
         numero1.classList.toggle("numbersPhase");
-        // numero2.classList.toggle("numbersPhase");
         if (numero2.className === "numbers n2"){
             numero2.classList.toggle("numbersPhase");
             console.log("cambiaste n2 locura mistica?????? " +numero2.className);
         }
 
-        // const btnStop = document.createElement('button');
-        // btnStop.classList.add("record");
-        // btnComenzar.style.display = "none";
-        // const textStop = document.createElement("p");
-        // textStop.textContent = "FINALIZAR";
-        // btnStop.appendChild(textStop);
-        // btnStop.style.display = "none";
 
         recordActions.appendChild(btnStop);
 
-        // const btnSubirGifo = document.createElement("div");
-        // btnSubirGifo.classList.add("subirGifo");
-        // const pBtnSubirGifo = document.createElement("p");
-        // pBtnSubirGifo.textContent = "SUBIR GIFO";
+
         const liRepetirCaptura = document.createElement("li");
         const pRepetirCaptura = document.createElement("p");
         pRepetirCaptura.textContent = "REPETIR CAPTURA";
         liRepetirCaptura.appendChild(pRepetirCaptura);
         liRepetirCaptura.classList.add("liRepetirCaptura");
         pasos.children[0].appendChild(liRepetirCaptura);
-        // btnSubirGifo.appendChild(pBtnSubirGifo);
-        // recordActions.appendChild(btnSubirGifo);
+
 
         btnSubirGifo.style.display = "none";
         liRepetirCaptura.style.display = "none";

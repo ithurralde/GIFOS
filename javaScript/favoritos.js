@@ -25,10 +25,10 @@ favs.addEventListener("click", () =>{
 
   let jsonLocalstorage = JSON.parse(localStorage.getItem("gifs"));
   if (jsonLocalstorage == null || jsonLocalstorage.list.length === 0){
-    // todo: el html para el caso que no hay gifs guardados en fav
+
     gifsFavs.style.display = "block";
     gifsFavs.style.flexWrap = "nowrap";
-    // gifsFavs.style.position = "relative";
+
     gifsFavs.style.left = "0%";
     gifsFavs.style.margin = "0%";
 
@@ -44,22 +44,16 @@ favs.addEventListener("click", () =>{
   }
   else{
 
-    // jsonLocalstorage.list.forEach(element => {
-    //   console.log("el elemento viejita: " +element.images.original.url);
-    //   console.log("el elemento viejita: " +element.username);
-    //   console.log("el elemento viejita: " +element.title);
-    //   addGifs(element, gifsFavs);
-    // });
+
     gifsFavs.style.display = "flex";
     gifsFavs.style.flexWrap = "wrap";
-    // gifsFavs.style.position = "relative";
-    // gifsFavs.style.left = "6%";
+
     gifsFavs.style.margin = "0 6%";
 
     addFavs(jsonLocalstorage);
     if (jsonLocalstorage.list.length >= 12)
       verMasFav.style.display = "flex";
-    // verMasFav.style.
+
   }
 
 
@@ -73,7 +67,7 @@ favs.addEventListener("click", () =>{
   overlay[0].style.display = "flex";
   overlay[1].style.display = "flex";
   overlay[2].style.display = "flex";
-  // justify-content: flex-end;
+
   const check = document.querySelector("#chkbox-menu");
   check.checked = false;
 });
@@ -83,7 +77,7 @@ async function addFavs(jsonLocalstorage){
   for (contadorFavs; contadorFavs < limitFav && contadorFavs < jsonLocalstorage.list.length; contadorFavs++) {
     if (contadorFavs === jsonLocalstorage.list.length -1)
       verMasFav.style.display = "none";
-      // console.log("entre al if contadorFavs = " + contadorFavs);
+
     const element = jsonLocalstorage.list[contadorFavs];
     await addGifs(element, gifsFavs, false);
   }

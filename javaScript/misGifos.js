@@ -15,13 +15,13 @@ misGifos.addEventListener("click", async () =>{
   gifsMisGifos.innerHTML = '';
 
   jsonLocalstorage = JSON.parse(localStorage.getItem("misGifos"));
-  // jsonLocalstorage.list.push(parseMiGif);
+
   console.log("el json pero con el get ULTRA JEJE: " + jsonLocalstorage);
 
   
 
   if (jsonLocalstorage == null || jsonLocalstorage.list.length === 0){
-    // todo: el html para el caso que no hay gifs guardados en fav
+
     const imgMisGifosSinContenido = document.createElement("img");
     imgMisGifosSinContenido.setAttribute('src', "/images/icon-mis-gifos-sin-contenido.svg");
     gifsMisGifos.appendChild(imgMisGifosSinContenido);
@@ -31,10 +31,7 @@ misGifos.addEventListener("click", async () =>{
     gifsMisGifos.appendChild(titleSinContenido);
   }
   else{
-    // for (let i = 0; i < jsonLocalstorage.list.length; i++) {
-    //   const element = jsonLocalstorage.list[i];
-    //   // addGifs(element, gifsMisGifos);
-    // }
+
     reccorer(jsonLocalstorage);
   }
 
@@ -63,8 +60,7 @@ async function reccorer(jsonLocalstorage){
         const miGifJson = await response.json();
         gifsMisGifos.style.display = "flex";
         gifsMisGifos.style.flexWrap = "wrap";
-        // gifsMisGifos.style.position = "relative";
-        // gifsMisGifos.style.left = "6%";
+
         gifsMisGifos.style.marginLeft = "6%";
         await addGifs(miGifJson.data[0], gifsMisGifos, true);
         console.log("PERO ESTA ENTRANDO ACA MEN??");

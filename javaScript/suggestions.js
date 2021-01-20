@@ -12,7 +12,7 @@ const searchSuggestions = async (suggestion) => {
     const listSuggestions = document.querySelector(".suggest");
     listSuggestions.innerHTML = '';
     listSuggestions.appendChild(ul);
-    // listSuggestions.classList.add("searchInput");
+
     line.style.display = "none";
     suggestions.forEach(element => {
       line.style.display = "block";
@@ -27,7 +27,7 @@ const searchSuggestions = async (suggestion) => {
       text.appendChild(imgLupaInput);
       text.appendChild(p);
       console.log("Nombre: " + element.name);
-      // text.textContent = text.textContent + " " +element.name;
+
       p.textContent = element.name;
       ul.appendChild(text);
       text.addEventListener("click", () => {
@@ -56,8 +56,4 @@ const searchSuggestions = async (suggestion) => {
        listSuggestions.innerHTML = '';
        line.style.display = "none";
     }
-  
-    // suggestions.forEach(element => {
-    //   console.log("suggesions: "+ element.name);
-    // });
-  })
+  });
