@@ -66,12 +66,29 @@ function cambiarFavsLocalStorage(gifApi, gif){
   if (jsonLocalstorage.list.find(unGif => unGif.id === gifApi.id)){
     // de la lista borro a partir del indice, un elemento
     jsonLocalstorage.list = jsonLocalstorage.list.filter(element => element.id !== gifApi.id);
-
     // este remove (gifRemove) lo hago para sacarlo de inmediato de la seccion de favoritos
     // sin la necesidad de tener que recargar la pagina
     const gifRemove = gif.parentNode; // parentNode seria el gifContainer
     if (gif.parentNode.parentNode.className === "sectionGifsFav")
       gifRemove.remove();
+    // else if (gif.parentNode.className === "maxGifBackground") {
+    //   const gifContainerBusqueda = document.querySelectorAll(".sectionGifsFav .gifContainer");
+    //   console.log(gifContainerBusqueda.length)
+    //   for (let i = 0; i < gifContainerBusqueda.length; i++){
+    //     console.log(gifContainerBusqueda[i].firstChild.src);
+    //     console.log(gifContainerBusqueda[i].className);
+    //     console.log(gifContainerBusqueda[i].parentNode.className);
+    //     if (gifContainerBusqueda[i].firstChild.src === gifApi.images.original.url){
+    //       console.log(gifContainerBusqueda[i]);
+    //       console.log("adadsada");
+    //       console.log(gifContainerBusqueda[i].className);
+    //       console.log(gifContainerBusqueda[i].parentNode.className);
+    //       // if (gifContainerBusqueda[i].parentNode.className === "sectionGifsFav")
+    //       //   gifContainerBusqueda[i].remove();
+    //     }
+    //   }
+
+    // }
     if (imgFav != null){
       imgFav.setAttribute('src', "images/icon-fav.svg");
     }
@@ -182,7 +199,7 @@ function completarOverlay(overlay, gifApi, gif, gifContainer, isMisGifos){
       cambiarFavsLocalStorage(gifApi, gif);
     });
   }
-  else
+  else{
     // si isMisGifos, btnFav es el boton DELETE 
     btnFav.addEventListener("click", () => {
       console.log(gifApi.id);
@@ -211,6 +228,7 @@ function completarOverlay(overlay, gifApi, gif, gifContainer, isMisGifos){
         gifsMisGifos.style.left = "0%"; 
       }
     });
+  }
 
   let widthMaximo = content.clientWidth;
   if (widthMaximo <= 768){
@@ -223,7 +241,7 @@ function completarOverlay(overlay, gifApi, gif, gifContainer, isMisGifos){
       console.log("entro papa");
       maxBtnGif(gif, gifContainer, gifApi, btnFav);
     });
-}
+  }
 }
 
 
@@ -244,14 +262,7 @@ function maxBtnGif(gif, gifContainer, gifApi, btnFavMinimizado){
   userName.classList = "maxGifUser";
 
   completarFav(fav, gifApi);
-  // const isFavMax = JSON.parse(localStorage.getItem("gifs"));
-  // if (isFavMax.list.find(element => element.id === gifApi.id))
-  // fav.setAttribute('src', "images/icon-fav-active.svg");
-  // else
-  // fav.setAttribute('src', "images/icon-fav.svg");
 
-
-  // fav.setAttribute('src', "images/icon-fav.svg");
   fav.classList = "fav";
   download.setAttribute('src', "images/icon-download.svg");
   download.classList = "download";
@@ -267,9 +278,8 @@ function maxBtnGif(gif, gifContainer, gifApi, btnFavMinimizado){
   div.appendChild(title);
   div.appendChild(fav);
   div.appendChild(download);
-  console.log("username askdsakjd: "+ userName);
-  // div.appendChild(title);
-  // div.appendChild(userName);
+
+
   content.appendChild(div);
 
 
@@ -286,12 +296,7 @@ function maxBtnGif(gif, gifContainer, gifApi, btnFavMinimizado){
   });
 
   fav.addEventListener("click", () =>{
-    cambiarFavsLocalStorage(gifApi, gif)
-    console.log("estoy entrando pero no agrego a fav papa jajajaj");
-    // localStorage.setItem("gifs", JSON.stringify(gifApi));
-    // await localStorage.setItem("src"+s, gif.src);
-    // await localStorage.setItem("title"+s, gifApi.title);
-    // await localStorage.setItem("user"+s, gifApi.username);
+    cambiarFavsLocalStorage(gifApi, gif);
   });
 
   download.addEventListener("click", () => {

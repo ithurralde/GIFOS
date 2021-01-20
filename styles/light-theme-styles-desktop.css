@@ -470,6 +470,11 @@
         height: 385px;
     }
     
+    .maxGifBackground .gif {
+        width: 695px;
+        height: 385px;
+    }
+
     .maxGifBackground {
         padding-left: 16%;
     }

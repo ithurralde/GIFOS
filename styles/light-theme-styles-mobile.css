@@ -278,7 +278,7 @@ ul li {
     #chkbox-menu:checked ~ .menu {
         margin-top: 15%;
     }  
-    
+
     .menu ul li{
         font-family: Montserrat-Bold;
         font-size: 12px;
@@ -491,6 +491,11 @@ ul li {
         width: 100%;
         height: 100%;
         background-color: white;
+    }
+
+    .maxGifBackground .gif{
+        width: auto;
+        height: 60%;
     }
 
     .maxGifBackground .cruzMax{
