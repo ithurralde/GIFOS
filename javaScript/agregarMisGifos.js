@@ -152,24 +152,24 @@ async function grabar(stream, video, h1Up, h1Down, pUp, pDown, liRepetirCaptura,
 
         //agregar cronometro
         liCronometro.style.display = "block";
-            // para mostrar el tiempo 0:0:0
-            pliCronometro.textContent = `${contador_horas}:${contador_minutos}:${contador_segundos}`;
-            cronometro = setInterval(() => {
-                if (contador_segundos === 60){
-                    contador_segundos = 0;
-                    contador_minutos++;
-                    if (contador_minutos === 60){
-                        contador_minutos = 0;
-                        contador_horas++;
-                    }
+        // para mostrar el tiempo 0:0:0
+        pliCronometro.textContent = `${contador_horas}:${contador_minutos}:${contador_segundos}`;
+        cronometro = setInterval(() => {
+            if (contador_segundos === 60){
+                contador_segundos = 0;
+                contador_minutos++;
+                if (contador_minutos === 60){
+                    contador_minutos = 0;
+                    contador_horas++;
                 }
-                contador_segundos++;
-                // para ir actualizando el cronometro a tiempo real
-                pliCronometro.textContent = `${contador_horas}:${contador_minutos}:${contador_segundos}`;
-                console.log("horas: " + contador_horas);
-                console.log("minutos: " + contador_minutos);
-                console.log("segundos: " + contador_segundos);
-            }, 1000);
+            }
+            contador_segundos++;
+            // para ir actualizando el cronometro a tiempo real
+            pliCronometro.textContent = `${contador_horas}:${contador_minutos}:${contador_segundos}`;
+            console.log("horas: " + contador_horas);
+            console.log("minutos: " + contador_minutos);
+            console.log("segundos: " + contador_segundos);
+        }, 1000);
     });
 
     btnAgregar.addEventListener("click", () => {
