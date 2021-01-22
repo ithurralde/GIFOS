@@ -298,6 +298,26 @@ function resetRecord(h1Up, h1Down, pUp, pDown){
         btnRecord.style.display = "none";
 
 
+
+
+        // Eventos para apagar la camara cuando cambiemos de seccion
+        home.addEventListener("click", () => {
+            var track = stream.getTracks()[0];  // if only one media track
+            track.stop();
+        });
+        misGifos.addEventListener("click", () => {
+            var track = stream.getTracks()[0];  // if only one media track
+            track.stop();
+        })
+        favs.addEventListener("click", () => {
+            var track = stream.getTracks()[0];  // if only one media track
+            track.stop();
+        })
+        // fin de los eventos para apagar la camara cuando cambiamos de seccion
+
+
+
+
         grabar(stream, video, h1Up, h1Down, pUp, pDown, liRepetirCaptura, btnRecord);
     })
     .catch( () => {
