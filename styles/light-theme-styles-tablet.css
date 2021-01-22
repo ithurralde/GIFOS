@@ -28,12 +28,27 @@
 }
 
 .btn-menu h1 {
-    font-size: 40px;
-    padding: 15px;
+    font-size: 12px;
+    padding: 0px;
 }
 
 .sectionGifs .noSearch {
     left: 0;
+}
+
+.gifContainer {
+    width: 231px;
+    height: 145px;
+}
+
+.gifContainer .gif{
+    width: 231px;
+    height: 145px;
+}
+
+.gifContainer .overlay{
+    width: 231px;
+    height: 145px;
 }
 
 /** ----------------------------------------------- Fin Header ----------------------------------------------- */
@@ -73,6 +88,20 @@
 */
 
 @media only screen and (min-width: 803px) and (max-width: 999px){
+    .gifContainer{
+        width: 243px;
+        height: 225px;
+    }
+
+    .gifContainer .gif{
+        width: 232px;
+        height: 214px;
+    }
+    
+    .gifContainer .overlay {
+        width: 232px;
+        height: 214px;
+    }
 
     .gifs .gifContainer{
         width: 243px;
@@ -91,6 +120,20 @@
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 1254px){
+    .gifContainer{
+        width: 308px;
+        height: 228px;
+    }
+
+    .gifContainer .gif{
+        width: 290px;
+        height: 214px;
+    }
+    
+    .gifContainer .overlay {
+        width: 290px;
+        height: 214px;
+    }
 
     .gifs .gifContainer{
         width: 308px;
