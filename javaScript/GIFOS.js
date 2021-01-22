@@ -155,9 +155,15 @@ function completarOverlay(overlay, gifApi, gif, gifContainer, isMisGifos){
   title.textContent = gifApi.title;
   const userName = document.createElement("h1");
   userName.textContent = gifApi.username;
-  overlay.appendChild(btnFav);
-  overlay.appendChild(btnDownload);
-  overlay.appendChild(btnMax);
+  // este if es para el caso mobile, al no tener overlay, le saco los botones de
+  // favoritos, download y maximizar. Para activar estos eventos en mobile,
+  // se hace click sobre el gif para que se agrande a pantalla completa, y ahi
+  // estan los botones
+  if (content.clientWidth >= 1220){
+    overlay.appendChild(btnFav);
+    overlay.appendChild(btnDownload);
+    overlay.appendChild(btnMax);
+  }
   overlay.appendChild(title);
   overlay.appendChild(userName);
 

@@ -72,20 +72,20 @@
 *  chiquitas baje el tamaño de los gifs de los trendings
 */
 
-@media only screen and (min-width: 803) and (max-width: 1219px){
+@media only screen and (min-width: 803px) and (max-width: 1254px){
 
     .gifs .gifContainer{
-        width: 377px;
-        height: 299px;
+        width: 243px;
+        height: 225px;
     }
 
     .gifs .gifContainer .gif{
-        width: 357px;
-        height: 275px;
+        width: 232px;
+        height: 214px;
     }
     
     .gifs .gifContainer .overlay{
-        width: 357px;
-        height: 275px;
+        width: 232px;
+        height: 214px;
     }
 }

@@ -602,3 +602,19 @@
     }
     /** ----------------------------------------------- Fin Footer ----------------------------------------------- */
 }
+
+
+
+@media only screen and (min-width: 1220px) and (max-width: 1254px){
+
+    .gifs .gifContainer {
+        width: 365px;
+        height: 287px;
+    }
+    
+    .gifs .gifContainer .overlay{
+        width: 365px;
+        height: 287px;
+    }
+
+}
