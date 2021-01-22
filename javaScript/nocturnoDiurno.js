@@ -3,10 +3,7 @@ const content = document.querySelector(".content");
 let changeImgs = true;
 
 changeTheme.addEventListener("click", () => {
-    console.log("estoy entrando con el click.");
-    console.log(content.querySelector(".dark-theme"));
     content.classList.toggle('dark-theme');
-    console.log(content.querySelector(".dark-theme"));
 
     /** Cambiar imagenes a darktheme */
     const logo = document.querySelector(".btn-changeTheme");

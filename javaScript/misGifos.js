@@ -16,8 +16,6 @@ misGifos.addEventListener("click", async () =>{
 
   jsonLocalstorage = JSON.parse(localStorage.getItem("misGifos"));
 
-  console.log("el json pero con el get ULTRA JEJE: " + jsonLocalstorage);
-
   
 
   if (jsonLocalstorage == null || jsonLocalstorage.list.length === 0){
@@ -63,7 +61,6 @@ async function reccorer(jsonLocalstorage){
 
         gifsMisGifos.style.marginLeft = "6%";
         await addGifs(miGifJson.data[0], gifsMisGifos, true);
-        console.log("PERO ESTA ENTRANDO ACA MEN??");
       })
       .catch( error => {
         console.log(`¡El gif con el id="${id}" ya no existe en giphy.com porque se ha eliminado! Error: ${error}`);

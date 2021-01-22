@@ -10,7 +10,6 @@ home.addEventListener("click", () => {
         btnAgregar.setAttribute('src', "images/CTA-crar-gifo-modo-noc.svg");
      else
         btnAgregar.setAttribute('src', "images/button-crear-gifo.svg");
-    console.log("y al logo?");
     loadHome.style.display = "block";
     loadTrendings.style.display = "block";
     loadFav.style.display = "none";

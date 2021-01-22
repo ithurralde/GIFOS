@@ -40,7 +40,6 @@ showTrendings = async (trendings, bool) => {
     if (contador >= 0){
       gifs.innerHTML = '';
       for (contador; contador < fin; contador++){
-        console.log("acaaa: " + trendings[contador].url);
         await addGifs(trendings[contador], gifs, false);
       }
     }
@@ -58,7 +57,6 @@ function cambiarFavsLocalStorage(gifApi, gif){
   let jsonLocalstorage = JSON.parse(localStorage.getItem("gifs"));
   const imgFav = gif.nextSibling.firstChild; // corazon del gif normal
   const imgFavMaximizado = document.querySelector(".fav"); // corazon del gif en maximizado
-  console.log("imgFav: " + imgFav);
   if (jsonLocalstorage === null){
     jsonLocalstorage = {"list" : []};
   }
@@ -111,13 +109,11 @@ function isActivoMenuHamburguesa(){
 function cambiarEstilos(overlay, gifContainer){
   if (isActivoMenuHamburguesa()){
     const bool = isActivoMenuHamburguesa();
-    console.log("que poronga soy? true" + bool);
     overlay.style.display = "flex";
     gifContainer.style.position = "relative";
   }
   else {
     const bool = isActivoMenuHamburguesa();
-    console.log("que poronga soy? false" + bool);
     overlay.style.display = "none";
     gifContainer.style.position = "unset";  
   }
@@ -188,20 +184,12 @@ function completarOverlay(overlay, gifApi, gif, gifContainer, isMisGifos){
       console.log(gifApi.id);
       let jsonLocalstorage = JSON.parse(localStorage.getItem("misGifos"));
       jsonLocalstorage.list = jsonLocalstorage.list.filter(element => element.id !== gifApi.id);
-      jsonLocalstorage.list.forEach(element => {
-        console.log("antes de hacer el pop: " + element);
-      });
 
-
-      console.log("jamas entro al if para borrar el gif")
       const i = jsonLocalstorage.list.indexOf(gifApi.id);
       jsonLocalstorage.list.splice( i, 1 );
       gifContainer.remove();
       
       console.log(jsonLocalstorage.list.length);
-      jsonLocalstorage.list.forEach(element => {
-        console.log("despues de hacer el pop: " + element);
-      });
       localStorage.setItem("misGifos", JSON.stringify(jsonLocalstorage));
       // el if saca los estilos de la seccion "sectionGifsMisGifos", para acomodar esa seccion en caso 
       // que haya borrado todos los gifs grabados por camara
@@ -221,7 +209,6 @@ function completarOverlay(overlay, gifApi, gif, gifContainer, isMisGifos){
   }
   else{
     btnMax.addEventListener("click", () => {
-      console.log("entro papa");
       maxBtnGif(gif, gifContainer, gifApi, btnFav);
     });
   }
@@ -308,7 +295,6 @@ async function addGifs(newGif, clasePadre, isMisGifos){
 
 // eventos para el boton slider de la izquierda
 btnSliderLeft.addEventListener("click", () => {
-  console.log("Boton izquierda");
   getGifs()
   .then(response => showTrendings(response, true))
   .catch(error => console.error("Ups! Hubo un problema: "+ error));
@@ -316,7 +302,6 @@ btnSliderLeft.addEventListener("click", () => {
 
 // eventos para el boton slider de la derecha
 btnSliderRight.addEventListener("click", () => {
-  console.log ("Boton derecha");
   getGifs()
   .then(response => showTrendings(response, false))
   .catch(error => console.error("Ups! Hubo un problema: "+ error));
@@ -353,7 +338,6 @@ async function showSearch(search){
   if (search.length !== 0){
     const nameSearch = document.createElement("h1");
     nameSearch.textContent = document.querySelector(".inputText").value;
-    console.log("nombrecito: " + nameSearch.textContent);
     sectionSearch.appendChild(nameSearch);
     for (let i = 0; i < search.length; i++){
       await addGifs(search[i], sectionSearch, false);
@@ -420,7 +404,6 @@ inputChange.addEventListener("keyup", () => {
 
 
 verMasP.addEventListener("click", () =>{
-  console.log("Me clickeo en ver mas");
   limitSearch += 12;
   searchGif();
 })

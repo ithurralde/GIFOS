@@ -101,8 +101,6 @@ btnAgregar.addEventListener("click", ()  => {
     clearInterval(cronometro);
     liCronometro.style.display = "none";
 
-    console.log("el class name de num2: " +numero2.className);
-    console.log("el class name de num1: " +numero1.className);
     if (numero1.className === "numbers n1 numbersPhase")
         numero1.classList.toggle("numbersPhase");
     if (numero2.className === "numbers n2 numbersPhase")
@@ -185,7 +183,6 @@ async function grabar(stream, video, h1Up, h1Down, pUp, pDown, liRepetirCaptura,
 async function stop(recorder, h1Up, h1Down, pUp, pDown, liRepetirCaptura){
     btnStop.addEventListener('click', () => {
     clearInterval(cronometro);
-    console.log("a ver el cronometrito locura mistica: " + cronometro);
     liCronometro.style.display = "none";
     //stopear cronometro
     btnStop.style.display = "none";
@@ -195,11 +192,8 @@ async function stop(recorder, h1Up, h1Down, pUp, pDown, liRepetirCaptura){
         btnSubirGifo.addEventListener("click", async () => {
                 overlayVideo.style.display = "flex";
                 numero2.classList.toggle("numbersPhase");
-                console.log("y numero 3 antes????: " + numero3.className);
                 numero3.classList.toggle("numbersPhase");
-                console.log("y numero 3????: " + numero3.className);
                 let blob = recorder.getBlob();
-                console.log("se viene el recorder papaaaaa");
                 console.log(recorder);
                 const data = new FormData();
                 data.append('file', blob, 'ungif.gif');
@@ -221,7 +215,6 @@ async function stop(recorder, h1Up, h1Down, pUp, pDown, liRepetirCaptura){
                 const response_json = await response.json();
                 jsonLocalstorage.list.push(response_json.data.id);
                 localStorage.setItem("misGifos", JSON.stringify(jsonLocalstorage));
-                console.log("el json jeje: " +jsonLocalstorage.list[0]);
                 console.log(response_json.data.id);
                 console.log(response_json);
                 imgOverlayVideo.setAttribute('src', "images/check.svg");
@@ -242,7 +235,6 @@ async function stop(recorder, h1Up, h1Down, pUp, pDown, liRepetirCaptura){
             console.log(numero2.className);
             if (numero2.className === "numbers n2"){
                 numero2.classList.toggle("numbersPhase");
-                console.log("cambiaste n2 locura mistica?????? " +numero2.className);
             }
             numero1.classList.toggle("numbersPhase");
             if (numero3.className === "numbers n3 numbersPhase")
@@ -277,7 +269,6 @@ function resetRecord(h1Up, h1Down, pUp, pDown){
         numero1.classList.toggle("numbersPhase");
         if (numero2.className === "numbers n2"){
             numero2.classList.toggle("numbersPhase");
-            console.log("cambiaste n2 locura mistica?????? " +numero2.className);
         }
 
 
