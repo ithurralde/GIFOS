@@ -73,25 +73,20 @@ ul li {
     }
 
 .btn-menu{
-    /* font-family: Montserrat-Bold; */
     font-size: 25px;
-    /* color: #572EE5; */
     text-align: center;
     line-height: 33px;
 }
 .btn-menu h1 {
     font-size: 40px;
-    /* padding: 15px; */
     font-family: Montserrat-Bold;
     width: 70%;
     font-size: 25px;
     color: #572EE5;
     text-align: center;
     line-height: 33px;
-    /* position: relative;
-    left: 15%; */
     margin-left: 15%;
-    /* align-self: center; */
+    padding: 15px;
 }
 
 .btn-menu span {
@@ -152,7 +147,7 @@ ul li {
 .sectionGifs .noSearch{
     align-self: center;
     position: relative;
-    left: 44%;
+    left: 0;
 }
 
 .sectionGifs p{
@@ -177,6 +172,8 @@ ul li {
     color: #572EE5;
     text-align: center;
     line-height: 30px;
+    width: 100%;
+    margin: 0;
 }
 
 .buscar {
@@ -246,7 +243,6 @@ ul li {
         border-radius: 16px;
         position: absolute;
         transform: rotate(0deg);
-        /*transform: .25s;*/
         transform-origin: left center;
         will-change: transform, opacity;
     }
@@ -259,14 +255,14 @@ ul li {
     .menu-icon span:nth-child(3){
         top: 18px;
     }
-    #chkbox-menu:checked ~ /*.label*/ .menu-icon span:nth-child(1){
+    #chkbox-menu:checked ~ .menu-icon span:nth-child(1){
         transform: rotate(45deg);
         width: 25px;
     }
-    #chkbox-menu:checked ~  /*.label*/ .menu-icon span:nth-child(2){
+    #chkbox-menu:checked ~ .menu-icon span:nth-child(2){
         opacity: 0 ;
     }
-    #chkbox-menu:checked ~  /*.label*/ .menu-icon span:nth-child(3){
+    #chkbox-menu:checked ~ .menu-icon span:nth-child(3){
         transform: rotate(-45deg);
         width: 25px;
     }
@@ -358,10 +354,10 @@ ul li {
     border: 1px solid #9CAFC3;
     width: 20%;
     position: relative;
-    left: 40%;
     opacity: 0.5;
     margin-top: 20px;
     display: none;
+    left: 0%;
 }
 /** ----------------------------------------------- Seccion Favoritos ----------------------------------------------- */
     .favoritos {
@@ -574,6 +570,7 @@ ul li {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
   }
 
 .gifs {

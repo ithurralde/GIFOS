@@ -1,7 +1,3 @@
-
-
-
-
 @media only screen and (min-width: 1220px) and (max-width: 1920px) {
     /** ----------------------------------------------- Header ----------------------------------------------- */
     .logoYlista {
@@ -51,6 +47,10 @@
     .sectionGifs h1 {
         width: 100%;
         margin: 0;
+    }
+
+    .sectionGifs .noSearch {
+        left: 0;
     }
     
     
