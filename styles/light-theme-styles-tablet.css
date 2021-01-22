@@ -1,0 +1,91 @@
+@media only screen and (min-width: 769px) and (max-width: 1219px) {
+/** ----------------------------------------------- Header ----------------------------------------------- */
+.menu ul {
+    width: 114%;
+    margin: -20px 0px 0 -30%;
+}
+
+.menu ul li {
+    right: -38px;
+}
+
+.imgBienvenida{
+    width: 50%;
+}
+
+.searchInput{
+    margin: -8px 0 25px 18%;
+    width: 60%;
+}
+
+.lineSectionGif {
+    left: 0%;
+}
+
+.sectionGifs h1 {
+    width: 100%;
+    margin: 0;
+}
+
+.btn-menu h1 {
+    font-size: 40px;
+    padding: 15px;
+}
+
+.sectionGifs .noSearch {
+    left: 0;
+}
+
+/** ----------------------------------------------- Fin Header ----------------------------------------------- */
+
+/** ----------------------------------------------- Trendings ----------------------------------------------- */
+
+.gifs{
+    width: 100%;
+    justify-content: center;
+}
+
+.gifs .gifContainer {
+    width: 231px;
+    height: 145px;
+}
+
+.gifs .gifContainer .overlay{
+    width: 231px;
+    height: 145px;
+}
+
+/** ----------------------------------------------- Fin Trendings ----------------------------------------------- */
+/** ----------------------------------------------- Footer ----------------------------------------------- */
+
+.footer ul{
+    margin-left: 10%;
+}
+
+/** ----------------------------------------------- Fin Footer ----------------------------------------------- */
+
+
+}
+
+/*
+*  este media query es para las tablet que tienen width de 803 en adelante, ya que para tablets mas 
+*  chiquitas baje el tamaño de los gifs de los trendings
+*/
+
+@media only screen and (min-width: 803) and (max-width: 1219px){
+
+    .gifs .gifContainer{
+        width: 377px;
+        height: 299px;
+    }
+
+    .gifs .gifContainer .gif{
+        width: 357px;
+        height: 275px;
+    }
+    
+    .gifs .gifContainer .overlay{
+        width: 357px;
+        height: 275px;
+    }
+}
