@@ -68,11 +68,11 @@
 }
 
 /*
-*  este media query es para las tablet que tienen width de 803 en adelante, ya que para tablets mas 
-*  chiquitas baje el tamaño de los gifs de los trendings
+*  estos media query son para las tablet que tienen width de 803px hasta 999px, y 
+*  1000px hasta 1254px, ya que para tablets mas chiquitas baje el tamaño de los gifs de los trendings
 */
 
-@media only screen and (min-width: 803px) and (max-width: 1254px){
+@media only screen and (min-width: 803px) and (max-width: 999px){
 
     .gifs .gifContainer{
         width: 243px;
@@ -86,6 +86,24 @@
     
     .gifs .gifContainer .overlay{
         width: 232px;
+        height: 214px;
+    }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1254px){
+
+    .gifs .gifContainer{
+        width: 308px;
+        height: 228px;
+    }
+
+    .gifs .gifContainer .gif{
+        width: 290px;
+        height: 214px;
+    }
+    
+    .gifs .gifContainer .overlay {
+        width: 290px;
         height: 214px;
     }
 }
