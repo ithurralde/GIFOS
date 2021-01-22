@@ -214,7 +214,7 @@ function completarOverlay(overlay, gifApi, gif, gifContainer, isMisGifos){
   }
 
   let widthMaximo = content.clientWidth;
-  if (widthMaximo <= 768){
+  if (widthMaximo < 1220){
     gifContainer.addEventListener("click", () => {
       maxBtnGif(gif, gifContainer, gifApi, btnFav);
     });
