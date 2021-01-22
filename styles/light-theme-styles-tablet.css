@@ -28,8 +28,8 @@
 }
 
 .btn-menu h1 {
-    font-size: 12px;
-    padding: 0px;
+    font-size: 25px;
+    padding: 5px;
 }
 
 .sectionGifs .noSearch {
@@ -120,6 +120,12 @@
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 1254px){
+    /* titulo header: */
+    .btn-menu h1 {
+        font-size: 35px;
+        padding: 10px;
+    }
+
     .gifContainer{
         width: 308px;
         height: 228px;
