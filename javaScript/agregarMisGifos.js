@@ -199,13 +199,19 @@ async function stop(recorder, h1Up, h1Down, pUp, pDown, liRepetirCaptura){
                 numero3.classList.toggle("numbersPhase");
                 console.log("y numero 3????: " + numero3.className);
                 let blob = recorder.getBlob();
+                console.log("se viene el recorder papaaaaa");
                 console.log(recorder);
                 const data = new FormData();
                 data.append('file', blob, 'ungif.gif');
-                const response = await fetch(`https://upload.giphy.com/v1/gifs?api_key=${apiKey}`, {
-                    method: 'POST', // *GET, POST, PUT, DELETE, etc.
-                    body: data
-                })
+                // este if lo hago para los casos en que el usuario quiere repetir la captura
+                // del modo en que lo hice, se crean gifs con blob.size = 0 y generar error
+                // de post, porque no ha nada que subir a giphy
+                if (blob.size !== 0){
+                    const response = await fetch(`https://upload.giphy.com/v1/gifs?api_key=${apiKey}`, {
+                        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                        body: data
+                    })
+               
 
 
                 console.log(response);
@@ -229,6 +235,7 @@ async function stop(recorder, h1Up, h1Down, pUp, pDown, liRepetirCaptura){
                 iconLinkOverlay.addEventListener("click", () => {
                     location.href = `https://giphy.com/gifs/${response_json.data.id}`;
                 });
+            }
         });
         
         liRepetirCaptura.addEventListener("click", async () =>{
