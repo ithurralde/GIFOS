@@ -59,7 +59,7 @@ async function reccorer(jsonLocalstorage){
         gifsMisGifos.style.display = "flex";
         gifsMisGifos.style.flexWrap = "wrap";
 
-        gifsMisGifos.style.marginLeft = "6%";
+        // gifsMisGifos.style.marginLeft = "6%";
         await addGifs(miGifJson.data[0], gifsMisGifos, true);
       })
       .catch( error => {
