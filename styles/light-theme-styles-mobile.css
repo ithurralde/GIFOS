@@ -359,6 +359,9 @@ ul li {
     display: none;
     left: 0%;
 }
+.p-sugerenciasTrendings span{
+    color: #572EE5;
+}
 /** ----------------------------------------------- Seccion Favoritos ----------------------------------------------- */
     .favoritos {
         display: none;
@@ -464,7 +467,7 @@ ul li {
         line-height: 30px;
     }
 
-    .seccionTrendigs p {
+    .seccionTrendigs p{
         font-family: Roboto-Regular;
         font-size: 18px;
         color: #000000;

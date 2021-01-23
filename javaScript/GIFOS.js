@@ -293,19 +293,19 @@ async function addGifs(newGif, clasePadre, isMisGifos){
   await clasePadre.appendChild(gifContainer);
 }
 
-// eventos para el boton slider de la izquierda
-btnSliderLeft.addEventListener("click", () => {
-  getGifs()
-  .then(response => showTrendings(response, true))
-  .catch(error => console.error("Ups! Hubo un problema: "+ error));
-});
+// // eventos para el boton slider de la izquierda
+// btnSliderLeft.addEventListener("click", () => {
+//   getGifs()
+//     .then(response => showTrendings(response, true))
+//     .catch(error => console.error("Ups! Hubo un problema: "+ error));
+// });
 
-// eventos para el boton slider de la derecha
-btnSliderRight.addEventListener("click", () => {
-  getGifs()
-  .then(response => showTrendings(response, false))
-  .catch(error => console.error("Ups! Hubo un problema: "+ error));
-});
+// // eventos para el boton slider de la derecha
+// btnSliderRight.addEventListener("click", () => {
+//   getGifs()
+//     .then(response => showTrendings(response, false))
+//     .catch(error => console.error("Ups! Hubo un problema: "+ error));
+// });
 
 getGifs()
   .then(response => showTrendings(response, false))

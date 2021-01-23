@@ -458,7 +458,7 @@
     .seccionTrendigs p {
         font-family: Roboto-Regular;
         font-size: 18px;
-        color: #ffffff;
+        /* color: #ffffff; */
         text-align: center;
     }
     

@@ -182,6 +182,9 @@
         border: none;
     }
     
+    .dark-theme .p-sugerenciasTrendings span{
+        color: #FFFFFF;
+    }
    
 /* -------------------------- Fin Header  -------------------------- */
 
