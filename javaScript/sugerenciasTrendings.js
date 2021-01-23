@@ -7,7 +7,6 @@ let contadorSugerenciasTrendings = 0;
 let busqueda = '';
 
 const getBusquedaTrendings = async (busqueda) => {
-    console.log("la busqueda que importa: " + busqueda);
     if (busqueda === ''){
         const data = getGifs()
         return data;
@@ -20,21 +19,18 @@ const getBusquedaTrendings = async (busqueda) => {
 }
 
 function capturarBusquedaTrendings(busqueda, bool){
-    console.log("en caputurar: " + contador);
     getBusquedaTrendings(busqueda)
         .then(response => showTrendings(response, bool))
         .catch(error => console.error("Ups! Hubo un problema: "+ error));
   }
   
 reactions.addEventListener("click", () => {
-    console.log("Click en Reactions");
     contador = 0;
     busqueda = "reactions";
     capturarBusquedaTrendings(busqueda, false);
 });
 
 entertainment.addEventListener("click", () => {
-    console.log("Click en Entertainment");
     contador = 0;
     busqueda = "entertainment";
     capturarBusquedaTrendings(busqueda, false);
