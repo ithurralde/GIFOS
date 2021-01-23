@@ -265,6 +265,8 @@
     .img-overlayVideo {
         position: relative;
         top: 40%;
+        width: 15px;
+        left: 50%;
     }
     
     .icon-download{
